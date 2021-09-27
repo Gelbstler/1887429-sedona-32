@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8" />
+    <title>Главная страница</title>
+  </head>
+  <body>
+    <header class="page-header">
+      <nav class="page-navigation">
+        <ul class="navigation-list">
+          <li class="navigation-item">
+            <a class="navigation-link" href="#">Главная</a>
+          </li>
+          <li class="navigation-item">
+            <a class="navigation-link" href="#">О Седоне</a>
+          </li>
+          <li class="navigation-item">
+            <a class="navigation-link-сurrent">Гостиницы</a>
+          </li>
+        </ul>
+      </nav>
+      <p>
+        <a class="header-logo" href="#">
+          <img src="" alt="Логотип Седоны" />
+        </a>
+      </p>
+      <ul class="user-menu">
+        <li>
+          <a class="user-menu-item" href="#">
+            <span class="visually-hidden">Поиск</span>
+          </a>
+        </li>
+        <li>
+          <a class="user-menu-item" href="#">
+            <span class="visually-hidden">Избранное</span>
+          </a>
+        </li>
+        <li>
+          <a class="button" href="#">Хочу сюда</a>
+        </li>
+      </ul>
+    </header>
+    <main class="main-inner">
+      <header class="main-inner-header">
+        <h1 class="main-inner-title">Гостиницы Седоны</h1>
+        <ul class="breadscrumbs-list">
+          <li class="breadscrumbs-item">
+            <a class="breadscrumbs-button-home" href="#">
+              <span class="visually-hidden">На главную</span>
+            </a>
+          </li>
+          <li class="breadscrumbs-item">
+            <a class="breadscrumbs-button-current">Гостиницы </a>
+          </li>
+        </ul>
+      </header>
+      <section class="catalog-filters">
+        <h2 class="visually-hidden">Список фильтров</h2>
+        <form
+          class="catalog-filters-form"
+          action="https://echo.htmlacademy.ru/"
+          method="GET"
+        >
+          <fieldset class="catalog-filter-groups">
+            <legend class="catalog-filter-title">Инфраструктура</legend>
+            <ul class="catalog-filter-list">
+              <li class="catalog-filter-item">
+                <label class="control">
+                  <input
+                    class="visually-hidden control-mark-input"
+                    type="checkbox"
+                    name="Бассейн"
+                    checked
+                  />
+                  <!-- Оставляю пустые спан-ы для кастомных чекбоксов -->
+                  <span class="control-mark"></span>
+                  <span class="control-label">Бассейн</span>
+                </label>
+              </li>
+              <li class="catalog-filter-item">
+                <label class="control">
+                  <input
+                    class="visually-hidden control-mark-input"
+                    type="checkbox"
+                    name="Парковка"
+                    checked
+                  />
+                  <!-- Оставляю пустые спан-ы для кастомных чекбоксов -->
+                  <span class="control-mark"></span>
+                  <span class="control-label">Парковка</span>
+                </label>
+              </li>
+              <li class="catalog-filter-item">
+                <label class="control">
+                  <input
+                    class="visually-hidden control-mark-input"
+                    type="checkbox"
+                    name="WI-FI"
+                  />
+                  <!-- Оставляю пустые спан-ы для кастомных чекбоксов -->
+                  <span class="control-mark"></span>
+                  <span class="control-label">WI-FI</span>
+                </label>
+              </li>
+            </ul>
+          </fieldset>
+          <fieldset class="catalog-filter-groups">
+            <legend class="catalog-filter-title">Тип жилья</legend>
+            <ul class="catalog-filter-list">
+              <li class="catalog-filter-item">
+                <label class="control">
+                  <input
+                    class="visually-hidden control-mark-input"
+                    type="radio"
+                    name="home-type"
+                    value="Гостиница"
+                    checked
+                  />
+                  <!-- Оставляю пустые спан-ы для кастомных чекбоксов -->
+                  <span class="control-mark"></span>
+                  <span class="control-label">Гостиница</span>
+                </label>
+              </li>
+              <li class="catalog-filter-item">
+                <label class="control">
+                  <input
+                    class="visually-hidden control-mark-input"
+                    type="radio"
+                    name="home-type"
+                    value="Мотель"
+                  />
+                  <!-- Оставляю пустые спан-ы для кастомных чекбоксов -->
+                  <span class="control-mark"></span>
+                  <span class="control-label">Мотель</span>
+                </label>
+              </li>
+              <li class="catalog-filter-item">
+                <label class="control">
+                  <input
+                    class="visually-hidden control-mark-input"
+                    type="radio"
+                    name="home-type"
+                    value="Апартаменты"
+                  />
+                  <!-- Оставляю пустые спан-ы для кастомных чекбоксов -->
+                  <span class="control-mark"></span>
+                  <span class="control-label">Апартаменты</span>
+                </label>
+              </li>
+            </ul>
+          </fieldset>
+          <fieldset class="catalog-filter-groups">
+            <legend class="catalog-filter-title">Стоимость, &#8381;</legend>
+            <label class="catalog-filter-label">
+              <input
+                class="catalog-filter-input"
+                type="number"
+                name="min-price"
+                value="0"
+              />От
+            </label>
+            <label class="catalog-filter-label">
+              <input
+                class="catalog-filter-input"
+                type="number"
+                name="max-price"
+                value="9000"
+              />До
+            </label>
+            <button class="range-toggle toggle-min" type="button">
+              <span class="visually-hidden">изменить минимальную цену</span>
+            </button>
+            <button class="range-toggle toggle-max" type="button">
+              <span class="visually-hidden">изменить максимальную цену</span>
+            </button>
+          </fieldset>
+          <ul class="buttons-list">
+            <li class="buttons-item">
+              <button class="button filter" type="submit">Применить</button>
+            </li>
+            <li class="buttons-item">
+              <a class="button return" href="#">Сбросить</a>
+              <!-- Здесь кнопка размечена как ссылка, т к без использования JS так будет проще всего сделать возврат к предыдущим значениям (перезагрузить страницу) -->
+            </li>
+          </ul>
+        </form>
+      </section>
+      <section class="catalog-items">
+        <h2 class="visually-hidden">Результаты поиска</h2>
+        <span class="search-results">Найдено гостиниц: 38</span>
+        <form class="sorting-type">
+          <label class="visually-hidden" for="sorting">Сортировка</label>
+          <select class="type-control" id="sorting" name="sorting">
+            <option value="сheaper">Сначала дешевые</option>
+            <option value="expensive">Сначала дорогие</option>
+            <option value="popular">Сначала популярные</option>
+          </select>
+          <button class="visually-hidden" type="submit">
+            Отсортировать продукты
+          </button>
+        </form>
+        <ul class="visual-sort-list">
+          <li class="visual-sort-item">
+            <a class="button visual-sort" href="#">
+              <span class="visually-hidden">Показать плитки</span>
+            </a>
+          </li>
+          <li class="visual-sort-item">
+            <a class="button visual-sort" href="#">
+              <span class="visually-hidden">Показать карточки</span>
+            </a>
+          </li>
+          <li class="visual-sort-item">
+            <a class="button visual-sorе current" href="#">
+              <span class="visually-hidden">Показать список</span>
+            </a>
+          </li>
+        </ul>
+        <ul class="hotel-cards">
+          <li class="hotel-cards-items">
+            <a class="hotel-cards-link" href="#">
+              <img class="hotel-cards-picture" src="" alt="" />
+              <h3 class="hotel-cards-title">Amara Resort &amp; Spa</h3>
+            </a>
+            <!-- нужно ли это оформлять таблицей или списком со скрытыми названиями? В духе Тип отеля : гостиница и тд? -->
+            <span class="hotel-cards-type">Гостиница</span>
+            <span class="hotel-cards-price">От 4000 &#8381;</span>
+            <span class="visually-hidden">4 звезды</span>
+            <!-- для кастомной оценки гостницы -->
+            <span class="hotel-cards-stars"></span>
+            <span class="hotel-cards-rating">Рейтинг:8,5</span>
+            <a class="button info" href="#">Подробнее</a>
+            <button class="button favourites" type="button">В избранное</button>
+            <!--Здесь я не уверен насчет кнопки, но функционально это должна быть кнопка. -->
+          </li>
+          <li class="hotel-cards-items">
+            <a class="hotel-cards-link" href="#">
+              <img class="hotel-cards-picture" src="" alt="" />
+              <h3 class="hotel-cards-title">ADesert Quail Inn</h3>
+            </a>
+            <!-- нужно ли это оформлять таблицей или списком со скрытыми названиями? В духе Тип отеля : гостиница и тд? -->
+            <span class="hotel-cards-type">Мотель</span>
+            <span class="hotel-cards-price">От 3000 &#8381;</span>
+            <span class="visually-hidden">3 звезды</span>
+            <!-- для кастомной оценки гостницы -->
+            <span class="hotel-cards-stars"></span>
+            <span class="hotel-cards-rating">Рейтинг:8,9</span>
+            <a class="button info" href="#">Подробнее</a>
+            <button class="button favourites" type="button">В избранное</button>
+            <!--Здесь я не уверен насчет кнопки, но функционально это должна быть кнопка. -->
+          </li>
+          <li class="hotel-cards-items">
+            <a class="hotel-cards-link" href="#">
+              <img class="hotel-cards-picture" src="" alt="" />
+              <h3 class="hotel-cards-title">Villas at Poco Diablo</h3>
+            </a>
+            <!-- нужно ли это оформлять таблицей или списком со скрытыми названиями? В духе Тип отеля : гостиница и тд? -->
+            <span class="hotel-cards-type">Апартаменты</span>
+            <span class="hotel-cards-price">От 2000 &#8381;</span>
+            <span class="visually-hidden">2 звезды</span>
+            <!-- для кастомной оценки гостницы -->
+            <span class="hotel-cards-stars"></span>
+            <span class="hotel-cards-rating">Рейтинг:9,2</span>
+            <a class="button info" href="#">Подробнее</a>
+            <button class="button favourites" type="button">В избранное</button>
+            <!--Здесь я не уверен насчет кнопки, но функционально это должна быть кнопка. -->
+          </li>
+          <li class="hotel-cards-items">
+            <a class="hotel-cards-link" href="#">
+              <img class="hotel-cards-picture" src="" alt="" />
+              <h3 class="hotel-cards-title">AGreenTree Inn</h3>
+            </a>
+            <!-- нужно ли это оформлять таблицей или списком со скрытыми названиями? В духе Тип отеля : гостиница и тд? -->
+            <span class="hotel-cards-type">Гостиница</span>
+            <span class="hotel-cards-price">От 3000 &#8381;</span>
+            <span class="visually-hidden">2 звезды</span>
+            <!-- для кастомной оценки гостницы -->
+            <span class="hotel-cards-stars"></span>
+            <span class="hotel-cards-rating">Рейтинг:9,2</span>
+            <a class="button info" href="#">Подробнее</a>
+            <button class="button favourites" type="button">В избранное</button>
+            <!--Здесь я не уверен насчет кнопки, но функционально это должна быть кнопка. -->
+          </li>
+        </ul>
+        <button class="button load-all" type="button">Загрузить еще</button>
+        <ul class="pagination">
+          <li class="pagination-item">
+            <a class="pagination-link pagination-current" href="#">1</a>
+          </li>
+          <li class="pagination-item">
+            <a class="pagination-link" href="#">2</a>
+          </li>
+          <li class="pagination-item">
+            <a class="pagination-link" href="#">3</a>
+          </li>
+          <li class="pagination-item">
+            <a class="pagination-link" href="#">4</a>
+          </li>
+          <li class="pagination-item">
+            <a class="pagination-link pagination-more" href="#">...</a>
+          </li>
+          <li class="pagination-item">
+            <a class="pagination-link" href="#">10</a>
+          </li>
+        </ul>
+        <form class="number-selection">
+          <label class="number-selection-label" for="selection-id"
+            >Гостиниц на странице</label
+          >
+          <select class="control-number" id="selection-id" name="selection">
+            <option value="4">4</option>
+            <option value="8">8</option>
+            <option value="12">12</option>
+          </select>
+          <button class="visually-hidden" type="submit">Изменить количество</button>
+        </form>
+      </section>
+    </main>
+    <footer class="page-footer">
+      <section class="newsletter">
+        <h2 class="newsletter-form-title">Подпишитесь на рассылку</h2>
+        <p class="newsletter-form-description">
+          Только полезная информация и никакого спама,<br />честное
+          бойскаутское!
+        </p>
+        <form
+          class="newsletter-form"
+          action="https://echo.htmlacademy.ru/"
+          method="POST"
+        >
+          <p class="newsletter-email">
+            <input
+              class="field"
+              type="Email"
+              name="newsletter-email"
+              placeholder="Ваш e-mail"
+            />
+            <button class="button subscribe" type="submit">Подписаться</button>
+          </p>
+        </form>
+      </section>
+      <section class="social-links">
+        <h2 class="visually-hidden">Ссылки на социальные сети</h2>
+        <ul class="social-links-list">
+          <li class="social-links-item">
+            <a class="button media" href="https://www.facebook.com/htmlacademy">
+              <span class="visually-hidden">Фейсбук</span>
+            </a>
+          </li>
+          <li class="social-links-item">
+            <a class="button media" href="https://twitter.com/htmlacademy_ru">
+              <span class="visually-hidden">Twitter</span>
+            </a>
+          </li>
+          <li class="social-links-item">
+            <a
+              class="button media"
+              href="https://www.youtube.com/HTMLacademyRUS"
+            >
+              <span class="visually-hidden">Youtube</span>
+            </a>
+          </li>
+        </ul>
+      </section>
+      <section class="phone-number">
+        <h2 class="visually-hidden">Телефон для брони</h2>
+        <a class="phone-number-link" href="tel:+78128121212">+7 (812)-12-12</a>
+      </section>
+      <section class="site-makers-link">
+        <h2 class="visually-hidden">Ссылка на сайт Академии</h2>
+        <a class="button makers" href="https://htmlacademy.ru/">
+          <span class="visually-hidden">Сайт Академии</span></a
+        >
+      </section>
+    </footer>
+  </body>
+</html>
