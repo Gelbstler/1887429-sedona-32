@@ -43,14 +43,14 @@
     <main class="main-inner">
       <header class="main-inner-header">
         <h1 class="main-inner-title">Гостиницы Седоны</h1>
-        <ul class="breadscrumbs-list">
-          <li class="breadscrumbs-item">
-            <a class="breadscrumbs-button-home" href="#">
+        <ul class="breadcrumbs-list">
+          <li class="breadcrumbs-item">
+            <a class="breadcrumbs-button-home" href="#">
               <span class="visually-hidden">На главную</span>
             </a>
           </li>
-          <li class="breadscrumbs-item">
-            <a class="breadscrumbs-button-current">Гостиницы </a>
+          <li class="breadcrumbs-item">
+            <a class="breadcrumbs-button-current">Гостиницы </a>
           </li>
         </ul>
       </header>
@@ -211,81 +211,79 @@
             </a>
           </li>
           <li class="visual-sort-item">
-            <a class="button visual-sorе current" href="#">
+            <a class="button visual-sort current" href="#">
               <span class="visually-hidden">Показать список</span>
             </a>
           </li>
         </ul>
-        <ul class="hotel-cards">
-          <li class="hotel-cards-items">
-            <a class="hotel-cards-link" href="#">
-              <img class="hotel-cards-picture" src="" alt="" />
-              <h3 class="hotel-cards-title">Amara Resort &amp; Spa</h3>
-            </a>
-            <!-- нужно ли это оформлять таблицей или списком со скрытыми названиями? В духе Тип отеля : гостиница и тд? -->
-            <span class="hotel-cards-type">Гостиница</span>
-            <span class="hotel-cards-price">От 4000 &#8381;</span>
-            <span class="visually-hidden">4 звезды</span>
-            <!-- для кастомной оценки гостницы -->
-            <span class="hotel-cards-stars"></span>
-            <span class="hotel-cards-rating">Рейтинг:8,5</span>
-            <a class="button info" href="#">Подробнее</a>
-            <button class="button favourites" type="button">В избранное</button>
-            <!--Здесь я не уверен насчет кнопки, но функционально это должна быть кнопка. -->
-          </li>
-          <li class="hotel-cards-items">
-            <a class="hotel-cards-link" href="#">
-              <img class="hotel-cards-picture" src="" alt="" />
-              <h3 class="hotel-cards-title">ADesert Quail Inn</h3>
-            </a>
-            <!-- нужно ли это оформлять таблицей или списком со скрытыми названиями? В духе Тип отеля : гостиница и тд? -->
-            <span class="hotel-cards-type">Мотель</span>
-            <span class="hotel-cards-price">От 3000 &#8381;</span>
-            <span class="visually-hidden">3 звезды</span>
-            <!-- для кастомной оценки гостницы -->
-            <span class="hotel-cards-stars"></span>
-            <span class="hotel-cards-rating">Рейтинг:8,9</span>
-            <a class="button info" href="#">Подробнее</a>
-            <button class="button favourites" type="button">В избранное</button>
-            <!--Здесь я не уверен насчет кнопки, но функционально это должна быть кнопка. -->
-          </li>
-          <li class="hotel-cards-items">
-            <a class="hotel-cards-link" href="#">
-              <img class="hotel-cards-picture" src="" alt="" />
-              <h3 class="hotel-cards-title">Villas at Poco Diablo</h3>
-            </a>
-            <!-- нужно ли это оформлять таблицей или списком со скрытыми названиями? В духе Тип отеля : гостиница и тд? -->
-            <span class="hotel-cards-type">Апартаменты</span>
-            <span class="hotel-cards-price">От 2000 &#8381;</span>
-            <span class="visually-hidden">2 звезды</span>
-            <!-- для кастомной оценки гостницы -->
-            <span class="hotel-cards-stars"></span>
-            <span class="hotel-cards-rating">Рейтинг:9,2</span>
-            <a class="button info" href="#">Подробнее</a>
-            <button class="button favourites" type="button">В избранное</button>
-            <!--Здесь я не уверен насчет кнопки, но функционально это должна быть кнопка. -->
-          </li>
-          <li class="hotel-cards-items">
-            <a class="hotel-cards-link" href="#">
-              <img class="hotel-cards-picture" src="" alt="" />
-              <h3 class="hotel-cards-title">AGreenTree Inn</h3>
-            </a>
-            <!-- нужно ли это оформлять таблицей или списком со скрытыми названиями? В духе Тип отеля : гостиница и тд? -->
-            <span class="hotel-cards-type">Гостиница</span>
-            <span class="hotel-cards-price">От 3000 &#8381;</span>
-            <span class="visually-hidden">2 звезды</span>
-            <!-- для кастомной оценки гостницы -->
-            <span class="hotel-cards-stars"></span>
-            <span class="hotel-cards-rating">Рейтинг:9,2</span>
-            <a class="button info" href="#">Подробнее</a>
-            <button class="button favourites" type="button">В избранное</button>
-            <!--Здесь я не уверен насчет кнопки, но функционально это должна быть кнопка. -->
-          </li>
-        </ul>
+        <article class="hotel-cards-items">
+          <a class="hotel-cards-link" href="#">
+            <h3 class="hotel-cards-title">Amara Resort &amp; Spa</h3>
+            <img
+              class="hotel-cards-picture"
+              src=""
+              alt="Amara Resort and Spa"
+            />
+          </a>
+          <span class="hotel-cards-type">Гостиница</span>
+          <span class="hotel-cards-price">От 4000 &#8381;</span>
+          <span class="visually-hidden">4 звезды</span>
+          <!-- для кастомной оценки гостницы -->
+          <span class="hotel-cards-stars"></span>
+          <span class="hotel-cards-rating">Рейтинг:8,5</span>
+          <a class="button info" href="#">Подробнее</a>
+          <button class="button favourites" type="button">В избранное</button>
+        </article>
+        <article class="hotel-cards-items">
+          <a class="hotel-cards-link" href="#">
+            <h3 class="hotel-cards-title">Desert Quail Inn</h3>
+            <img class="hotel-cards-picture" src="" alt="Desert Quail Inn" />
+          </a>
+          <span class="hotel-cards-type">Мотель</span>
+          <span class="hotel-cards-price">От 3000 &#8381;</span>
+          <span class="visually-hidden">3 звезды</span>
+          <!-- для кастомной оценки гостницы -->
+          <span class="hotel-cards-stars"></span>
+          <span class="hotel-cards-rating">Рейтинг:8,9</span>
+          <a class="button info" href="#">Подробнее</a>
+          <button class="button favourites" type="button">В избранное</button>
+        </article>
+        <article class="hotel-cards-items">
+          <a class="hotel-cards-link" href="#">
+            <h3 class="hotel-cards-title">Villas at Poco Diablo</h3>
+            <img
+              class="hotel-cards-picture"
+              src=""
+              alt="Villas at Poco Diablo"
+            />
+          </a>
+          <span class="hotel-cards-type">Апартаменты</span>
+          <span class="hotel-cards-price">От 2000 &#8381;</span>
+          <span class="visually-hidden">2 звезды</span>
+          <!-- для кастомной оценки гостницы -->
+          <span class="hotel-cards-stars"></span>
+          <span class="hotel-cards-rating">Рейтинг:9,2</span>
+          <a class="button info" href="#">Подробнее</a>
+          <button class="button favourites" type="button">В избранное</button>
+        </article>
+        <article class="hotel-cards-items">
+          <a class="hotel-cards-link" href="#">
+            <h3 class="hotel-cards-title">GreenTree Inn</h3>
+            <img class="hotel-cards-picture" src="" alt="GreenTree Inn" />
+          </a>
+          <span class="hotel-cards-type">Гостиница</span>
+          <span class="hotel-cards-price">От 3000 &#8381;</span>
+          <span class="visually-hidden">2 звезды</span>
+          <!-- для кастомной оценки гостницы -->
+          <span class="hotel-cards-stars"></span>
+          <span class="hotel-cards-rating">Рейтинг:9,2</span>
+          <a class="button info" href="#">Подробнее</a>
+          <button class="button favourites" type="button">В избранное</button>
+        </article>
         <button class="button load-all" type="button">Загрузить еще</button>
         <ul class="pagination">
           <li class="pagination-item">
-            <a class="pagination-link pagination-current" href="#">1</a>
+            <a class="pagination-link pagination-current">1</a>
           </li>
           <li class="pagination-item">
             <a class="pagination-link" href="#">2</a>
@@ -312,7 +310,9 @@
             <option value="8">8</option>
             <option value="12">12</option>
           </select>
-          <button class="visually-hidden" type="submit">Изменить количество</button>
+          <button class="visually-hidden" type="submit">
+            Изменить количество
+          </button>
         </form>
       </section>
     </main>
@@ -329,11 +329,13 @@
           method="POST"
         >
           <p class="newsletter-email">
+            <label class="visually-hidden" for="newsletter-email">Email</label>
             <input
               class="field"
               type="Email"
               name="newsletter-email"
               placeholder="Ваш e-mail"
+              id="newsletter-email"
             />
             <button class="button subscribe" type="submit">Подписаться</button>
           </p>
@@ -369,8 +371,8 @@
       <section class="site-makers-link">
         <h2 class="visually-hidden">Ссылка на сайт Академии</h2>
         <a class="button makers" href="https://htmlacademy.ru/">
-          <span class="visually-hidden">Сайт Академии</span></a
-        >
+          <span class="visually-hidden">Сайт Академии</span>
+        </a>
       </section>
     </footer>
   </body>
