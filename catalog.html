@@ -3,25 +3,32 @@
   <head>
     <meta charset="utf-8" />
     <title>Главная страница</title>
+    <link rel="stylesheet" href="styles/styles.css" />
   </head>
   <body>
     <header class="page-header">
       <nav class="page-navigation">
         <ul class="navigation-list">
           <li class="navigation-item">
-            <a class="navigation-link" href="#">Главная</a>
+            <a class="navigation-link-current">Главная</a>
           </li>
           <li class="navigation-item">
             <a class="navigation-link" href="#">О Седоне</a>
           </li>
           <li class="navigation-item">
-            <a class="navigation-link-сurrent">Гостиницы</a>
+            <a class="navigation-link" href="#">Гостиницы</a>
           </li>
         </ul>
       </nav>
       <p>
-        <a class="header-logo" href="#">
-          <img src="" alt="Логотип Седоны" />
+        <a class="header-logo">
+          <img
+            class="header-logo-icon"
+            src="img/main/sedona-logo.png"
+            width="138"
+            height="70"
+            alt="Логотип Седоны"
+          />
         </a>
       </p>
       <ul class="user-menu">
@@ -221,7 +228,9 @@
             <h3 class="hotel-cards-title">Amara Resort &amp; Spa</h3>
             <img
               class="hotel-cards-picture"
-              src=""
+              src="img/catalog/hotel-1.jpg"
+              width="180"
+              height="120"
               alt="Amara Resort and Spa"
             />
           </a>
@@ -237,7 +246,13 @@
         <article class="hotel-cards-items">
           <a class="hotel-cards-link" href="#">
             <h3 class="hotel-cards-title">Desert Quail Inn</h3>
-            <img class="hotel-cards-picture" src="" alt="Desert Quail Inn" />
+            <img
+              class="hotel-cards-picture"
+              src="img/catalog/hotel-2.jpg"
+              alt="Desert Quail Inn"
+              width="180"
+              height="120"
+            />
           </a>
           <span class="hotel-cards-type">Мотель</span>
           <span class="hotel-cards-price">От 3000 &#8381;</span>
@@ -253,7 +268,9 @@
             <h3 class="hotel-cards-title">Villas at Poco Diablo</h3>
             <img
               class="hotel-cards-picture"
-              src=""
+              src="img/catalog/hotel-3.jpg"
+              width="180"
+              height="120"
               alt="Villas at Poco Diablo"
             />
           </a>
@@ -269,7 +286,13 @@
         <article class="hotel-cards-items">
           <a class="hotel-cards-link" href="#">
             <h3 class="hotel-cards-title">GreenTree Inn</h3>
-            <img class="hotel-cards-picture" src="" alt="GreenTree Inn" />
+            <img
+              class="hotel-cards-picture"
+              src="img/catalog/hotel-4.jpg"
+              alt="GreenTree Inn"
+              width="180"
+              height="120"
+            />
           </a>
           <span class="hotel-cards-type">Гостиница</span>
           <span class="hotel-cards-price">От 3000 &#8381;</span>
@@ -317,9 +340,9 @@
       </section>
     </main>
     <footer class="page-footer">
-      <section class="newsletter">
+      <section class="newsletter-catalog">
         <h2 class="newsletter-form-title">Подпишитесь на рассылку</h2>
-        <p class="newsletter-form-description">
+        <p class="newsletter-form-description">ß
           Только полезная информация и никакого спама,<br />честное
           бойскаутское!
         </p>
@@ -329,13 +352,11 @@
           method="POST"
         >
           <p class="newsletter-email">
-            <label class="visually-hidden" for="newsletter-email">Email</label>
             <input
               class="field"
               type="Email"
               name="newsletter-email"
               placeholder="Ваш e-mail"
-              id="newsletter-email"
             />
             <button class="button subscribe" type="submit">Подписаться</button>
           </p>
@@ -371,8 +392,8 @@
       <section class="site-makers-link">
         <h2 class="visually-hidden">Ссылка на сайт Академии</h2>
         <a class="button makers" href="https://htmlacademy.ru/">
-          <span class="visually-hidden">Сайт Академии</span>
-        </a>
+          <span class="visually-hidden">Сайт Академии</span></a
+        >
       </section>
     </footer>
   </body>

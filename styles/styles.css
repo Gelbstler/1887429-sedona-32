@@ -1,0 +1,70 @@
+.body {
+  background-color: white;
+  color: black;
+}
+
+.main-index {
+  color: black;
+  background-color: white;
+  background-image: url("../img/main/index-background-2.jpg");
+  /* вот здесь у меня нюанс - нужно ли делать картинку которую я обьединил с номером -2? Или я могу взять index-background.jpg + index-background-frame+ сделать прямоугольник в СSS? */
+  background-repeat: no-repeat;
+  background-size: 100% auto;
+}
+
+.advantages-list-item {
+  color: white;
+  background-color: #83b3d3;
+}
+
+.advantages-description-clarification-item:first-child {
+  color: black;
+  background-color: white;
+  background-image: url("../img/icons/background-advantages-1.png");
+  background-size: 100 auto;
+}
+
+.advantages-description-clarification-item:nth-child(2) {
+  color: black;
+  background-color: white;
+}
+.advantages-description-clarification-item:nth-child(3) {
+  color: black;
+  background-color: white;
+  background-image: url("../img/icons/background-advantages-1.png");
+  background-size: 100 auto;
+}
+.advantages-list-item:nth-child(3),
+.advantages-list-item:nth-child(5) {
+  color: black;
+  background-color: white;
+  background-image: url("../img/icons/background-advantages-1.png");
+  background-size: 100 auto;
+}
+.advantages-list-item:nth-child(4) {
+  color: black;
+  background-color: white;
+  background-image: url("../img/icons/background-advantages-2.png");
+  background-size: 100 auto;
+}
+
+.newsletter {
+  height: 411px;
+  color: white;
+  background-color: #83b3d3;
+  background-size: 100% auto;
+  background-image: url("../img/main/newsletter-background.jpg");
+  background-repeat: no-repeat;
+}
+.main-inner {
+  color: white;
+  background-color: #83b3d3;
+  background-image: url("../img/catalog/catalog-background.jpg");
+  /* вот здесь у меня нюанс - нужно ли делать картинку которую я обьединил с номером -2? Или я могу взять index-background.jpg + index-background-frame+ сделать прямоугольник в СSS? */
+  background-repeat: no-repeat;
+  background-size: 100% auto;
+}
+.catalog-items {
+  color: black;
+  background-color: white;
+}
