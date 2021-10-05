@@ -1,6 +1,51 @@
-.body {
+@font-face {
+  font-family: "PT Sans";
+  font-style: normal;
+  font-weight: 400;
+  src: url("../fonts/ptsans-400.woff2") format(woff2);
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "PT Sans";
+  font-style: normal;
+  font-weight: 700;
+  src: url("../fonts/ptsans-700.woff2") format(woff2);
+  font-display: swap;
+}
+
+body {
   background-color: white;
   color: black;
+  font-family: "PT Sans", sans-serif;
+  font-size: 18px;
+  line-height: 21px;
+}
+
+.navigation-link,
+.navigation-link-current {
+  color: black;
+  line-height: 26px;
+  font-weight: 700;
+  font-size: 20px;
+  text-decoration: none;
+  text-align: left;
+}
+.navigation-link-current{
+  text-decoration: underline;
+}
+
+.button {
+  color: white;
+  background-color: #756257;
+  border-radius: 4px;
+  /* на этом этапе вроде не нужно задавать эту тему, но я решил попробовать с закруглениями */
+  font-weight: 700;
+  font-size: 16px;
+  text-decoration: none;
+  text-transform: uppercase;
+  text-align: center;
+  line-height: 21px;
 }
 
 .main-index {
@@ -12,9 +57,50 @@
   background-size: 100% auto;
 }
 
+.main-inner {
+  color: white;
+  background-color: #83b3d3;
+  background-image: url("../img/catalog/catalog-background.jpg");
+  /* вот здесь у меня нюанс - нужно ли делать картинку которую я обьединил с номером -2? Или я могу взять index-background.jpg + index-background-frame+ сделать прямоугольник в СSS? */
+  background-repeat: no-repeat;
+  background-size: 100% auto;
+}
+
+
+.sedona-definition {
+  color: black;
+  font-weight: 400;
+  font-size: 30px;
+  line-height: 36px;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+advantages-list-description {
+  font-size: 22px;
+  line-height: 36px;
+  text-align: center;
+}
+
 .advantages-list-item {
   color: white;
   background-color: #83b3d3;
+}
+
+.advantages-title,
+.advantages-description-clarification-header {
+  font-weight: 700;
+  font-size: 24px;
+  text-align: center;
+  text-transform: uppercase;
+  line-height: 28px;
+}
+
+.advantages-description,.advantages-description-clarification{
+  font-weight: 400;
+  font-size: 18px;
+  text-align: center;
+  line-height:21px ;
 }
 
 .advantages-description-clarification-item:first-child {
@@ -28,12 +114,14 @@
   color: black;
   background-color: white;
 }
+
 .advantages-description-clarification-item:nth-child(3) {
   color: black;
   background-color: white;
   background-image: url("../img/icons/background-advantages-1.png");
   background-size: 100 auto;
 }
+
 .advantages-list-item:nth-child(3),
 .advantages-list-item:nth-child(5) {
   color: black;
@@ -41,11 +129,38 @@
   background-image: url("../img/icons/background-advantages-1.png");
   background-size: 100 auto;
 }
+
 .advantages-list-item:nth-child(4) {
   color: black;
   background-color: white;
   background-image: url("../img/icons/background-advantages-2.png");
   background-size: 100 auto;
+}
+
+.hotel-finder {
+  color:black;
+  background-color: white;
+  background-size: 1200px 417px;
+  text-align: center;
+}
+
+.hotel-finder-title {
+  font-weight: 700;
+  font-size: 30px;
+  line-height: 36px;
+  text-transform: uppercase;
+}
+
+hotel-finder-description {
+  font-weight: 400;
+  font-size: 22px;
+  line-height: 26px;
+}
+
+.hotel-finder-link {
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 36px;
 }
 
 .newsletter {
@@ -55,16 +170,131 @@
   background-size: 100% auto;
   background-image: url("../img/main/newsletter-background.jpg");
   background-repeat: no-repeat;
+  text-align: center;
 }
-.main-inner {
-  color: white;
-  background-color: #83b3d3;
-  background-image: url("../img/catalog/catalog-background.jpg");
-  /* вот здесь у меня нюанс - нужно ли делать картинку которую я обьединил с номером -2? Или я могу взять index-background.jpg + index-background-frame+ сделать прямоугольник в СSS? */
-  background-repeat: no-repeat;
-  background-size: 100% auto;
+.newsletter-catalog{
+  height: 411px;
+  text-align: center;
 }
+.newsletter-form-title{
+  font-weight: 700;
+  font-size: 30px;
+  line-height: 36px;
+  text-transform: uppercase;
+}
+
+.newsletter-form-description{
+  font-weight: 400;
+  font-size: 22px;
+  line-height: 26px;
+}
+
 .catalog-items {
   color: black;
   background-color: white;
+  text-align: left;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 24x;
+}
+
+input[type="Email"] {
+  font-size:18px;
+  line-height :26px;
+  color: black;
+  background-color: white;
+  text-align: left;
+}
+
+.button.subscribe {
+  color: white;
+  background-color: #83b3d3;
+}
+
+.phone-number-link {
+  color:black;
+  font-weight: 400;
+  font-size: 40px;
+  line-height: 240px;
+  text-decoration: none;
+  text-align: center;
+}
+
+/* кнопки внизу иконками на этом этапе пока не заменял */
+.button.filter {
+  color: white;
+  background-color: #83b3d3;
+}
+
+.button.return {
+  font-weight: 400;
+  line-height:23px;
+  color: white;
+  background-color: inherit;
+  text-transform: none;
+}
+.main-inner-header {
+  font-weight: 700;
+  font-size: 60px;
+  line-height: 78px;
+  text-align: left;
+}
+.breadcrumbs-item{
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 21px;
+  text-align: left;
+}
+.catalog-filter-title {
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 26px;
+  text-align: left;
+}
+.catalog-filter-item {
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 24px;
+  text-align: left;
+}
+.search-results{
+  font-weight: 700;
+  font-size: 30px;
+  line-height: 39px;
+  text-transform: uppercase;
+}
+.type-control{
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 24x;
+}
+.hotel-cards-link {
+  color:black;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 31px;
+  text-decoration: none;
+}
+.favourites{
+  background-color: #83b3d3;
+  font-size:  16px;
+}
+.hotel-cards-rating{
+  background-color:#F2F2F2 ;
+  text-transform: uppercase;
+  text-align:center;
+}
+.load-all{
+  background-color:#83B3D3 ;
+  font-size: 20px;
+  line-height: 26px;
+  text-align: center;
+}
+.pagination-link {
+  color:white;
+  font-size:700 ;
+  background-color:#83B3D3 ;
+  font-size: 20px;
+  line-height: 26px;
+  text-align: center;
 }
