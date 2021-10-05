@@ -233,41 +233,48 @@ input[type="Email"] {
   background-color: inherit;
   text-transform: none;
 }
+
 .main-inner-header {
   font-weight: 700;
   font-size: 60px;
   line-height: 78px;
   text-align: left;
 }
+
 .breadcrumbs-item{
   font-weight: 400;
   font-size: 16px;
   line-height: 21px;
   text-align: left;
 }
+
 .catalog-filter-title {
   font-weight: 700;
   font-size: 20px;
   line-height: 26px;
   text-align: left;
 }
+
 .catalog-filter-item {
   font-weight: 400;
   font-size: 18px;
   line-height: 24px;
   text-align: left;
 }
+
 .search-results{
   font-weight: 700;
   font-size: 30px;
   line-height: 39px;
   text-transform: uppercase;
 }
+
 .type-control{
   font-weight: 400;
   font-size: 18px;
   line-height: 24x;
 }
+
 .hotel-cards-link {
   color:black;
   font-weight: 700;
@@ -275,21 +282,25 @@ input[type="Email"] {
   line-height: 31px;
   text-decoration: none;
 }
+
 .favourites{
   background-color: #83b3d3;
   font-size:  16px;
 }
+
 .hotel-cards-rating{
   background-color:#F2F2F2 ;
   text-transform: uppercase;
   text-align:center;
 }
+
 .load-all{
   background-color:#83B3D3 ;
   font-size: 20px;
   line-height: 26px;
   text-align: center;
 }
+
 .pagination-link {
   color:white;
   font-size:700 ;
