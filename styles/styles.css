@@ -55,6 +55,7 @@ body {
   /* вот здесь у меня нюанс - нужно ли делать картинку которую я обьединил с номером -2? Или я могу взять index-background.jpg + index-background-frame+ сделать прямоугольник в СSS? */
   background-repeat: no-repeat;
   background-size: 100% auto;
+  text-align: center;
 }
 
 .main-inner {
@@ -64,16 +65,15 @@ body {
   /* вот здесь у меня нюанс - нужно ли делать картинку которую я обьединил с номером -2? Или я могу взять index-background.jpg + index-background-frame+ сделать прямоугольник в СSS? */
   background-repeat: no-repeat;
   background-size: 100% auto;
+  text-align: left;
 }
 
 
 .sedona-definition {
-  color: black;
   font-weight: 400;
   font-size: 30px;
   line-height: 36px;
   text-transform: uppercase;
-  text-align: center;
 }
 
 advantages-list-description {
@@ -94,13 +94,6 @@ advantages-list-description {
   text-align: center;
   text-transform: uppercase;
   line-height: 28px;
-}
-
-.advantages-description,.advantages-description-clarification{
-  font-weight: 400;
-  font-size: 18px;
-  text-align: center;
-  line-height:21px ;
 }
 
 .advantages-description-clarification-item:first-child {
@@ -138,10 +131,8 @@ advantages-list-description {
 }
 
 .hotel-finder {
-  color:black;
-  background-color: white;
   background-size: 1200px 417px;
-  text-align: center;
+  /* это для себя для примерной разметки */
 }
 
 .hotel-finder-title {
@@ -203,7 +194,6 @@ input[type="Email"] {
   line-height :26px;
   color: black;
   background-color: white;
-  text-align: left;
 }
 
 .button.subscribe {
@@ -238,28 +228,24 @@ input[type="Email"] {
   font-weight: 700;
   font-size: 60px;
   line-height: 78px;
-  text-align: left;
 }
 
 .breadcrumbs-item{
   font-weight: 400;
   font-size: 16px;
   line-height: 21px;
-  text-align: left;
 }
 
 .catalog-filter-title {
   font-weight: 700;
   font-size: 20px;
   line-height: 26px;
-  text-align: left;
 }
 
 .catalog-filter-item {
   font-weight: 400;
   font-size: 18px;
   line-height: 24px;
-  text-align: left;
 }
 
 .search-results{
