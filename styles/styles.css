@@ -2,7 +2,7 @@
   font-family: "PT Sans";
   font-style: normal;
   font-weight: 400;
-  src: url("../fonts/ptsans-400.woff2") format(woff2);
+  src: url("../fonts/ptsans-400.woff2") format("woff2");
   font-display: swap;
 }
 
@@ -10,7 +10,7 @@
   font-family: "PT Sans";
   font-style: normal;
   font-weight: 700;
-  src: url("../fonts/ptsans-700.woff2") format(woff2);
+  src: url("../fonts/ptsans-700.woff2") format("woff2");
   font-display: swap;
 }
 
@@ -76,7 +76,7 @@ body {
   text-transform: uppercase;
 }
 
-advantages-list-description {
+.advantages-list-description {
   font-size: 22px;
   line-height: 36px;
   text-align: center;
@@ -100,7 +100,7 @@ advantages-list-description {
   color: black;
   background-color: white;
   background-image: url("../img/icons/background-advantages-1.png");
-  background-size: 100 auto;
+  background-size: 100% auto;
 }
 
 .advantages-description-clarification-item:nth-child(2) {
@@ -112,7 +112,7 @@ advantages-list-description {
   color: black;
   background-color: white;
   background-image: url("../img/icons/background-advantages-1.png");
-  background-size: 100 auto;
+  background-size: 100% auto;
 }
 
 .advantages-list-item:nth-child(3),
@@ -120,14 +120,14 @@ advantages-list-description {
   color: black;
   background-color: white;
   background-image: url("../img/icons/background-advantages-1.png");
-  background-size: 100 auto;
+  background-size: 100% auto;
 }
 
 .advantages-list-item:nth-child(4) {
   color: black;
   background-color: white;
   background-image: url("../img/icons/background-advantages-2.png");
-  background-size: 100 auto;
+  background-size: 100% auto;
 }
 
 .hotel-finder {
@@ -142,7 +142,7 @@ advantages-list-description {
   text-transform: uppercase;
 }
 
-hotel-finder-description {
+.hotel-finder-description {
   font-weight: 400;
   font-size: 22px;
   line-height: 26px;
@@ -163,10 +163,12 @@ hotel-finder-description {
   background-repeat: no-repeat;
   text-align: center;
 }
+
 .newsletter-catalog{
   height: 411px;
   text-align: center;
 }
+
 .newsletter-form-title{
   font-weight: 700;
   font-size: 30px;
@@ -186,7 +188,7 @@ hotel-finder-description {
   text-align: left;
   font-weight: 400;
   font-size: 18px;
-  line-height: 24x;
+  line-height: 24px;
 }
 
 input[type="Email"] {
@@ -258,7 +260,7 @@ input[type="Email"] {
 .type-control{
   font-weight: 400;
   font-size: 18px;
-  line-height: 24x;
+  line-height: 24px;
 }
 
 .hotel-cards-link {
@@ -271,7 +273,7 @@ input[type="Email"] {
 
 .favourites{
   background-color: #83b3d3;
-  font-size:  16px;
+  font-size: 16px;
 }
 
 .hotel-cards-rating{
@@ -289,7 +291,7 @@ input[type="Email"] {
 
 .pagination-link {
   color:white;
-  font-size:700 ;
+  font-weight:700 ;
   background-color:#83B3D3 ;
   font-size: 20px;
   line-height: 26px;
