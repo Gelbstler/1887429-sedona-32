@@ -23,8 +23,8 @@ body {
   display: flex;
   flex-direction: column;
   min-height: 100%;
-  background-color: white;
-  color: black;
+  background-color: #FFFFFF;
+  color: #000000;
   font-family: "PT Sans", sans-serif;
   font-size: 18px;
   line-height: 21px;
@@ -40,23 +40,25 @@ body {
   margin: 0;
   padding: 0;
   width: 410px;
+  margin-left:71px;
   /* размер с запасом на элемент */
 }
 .user-menu {
   max-width: 270px;
   /* размер с запасом на элемент */
   margin-left: auto;
+  margin-right:72px;
 }
 
 .navigation-logo {
-  margin: auto;
+  margin-right: 210px;
   /* пока решил что таким свойством будет проще всего выровнять этот элемент внутри шапки, но не уверен  */
   width: 140px;
 }
 
 .navigation-link,
 .navigation-link-current {
-  color: black;
+  color: #000000;
   line-height: 26px;
   font-weight: 700;
   font-size: 20px;
@@ -72,7 +74,7 @@ body {
 }
 
 .button {
-  color: white;
+  color: #FFFFFF;
   background-color: #756257;
   border-radius: 4px;
   /* на этом этапе вроде не нужно задавать эту тему, но я решил попробовать с закруглениями */
@@ -85,8 +87,8 @@ body {
 }
 
 .main-index {
-  color: black;
-  background-color: white;
+  color: #000000;
+  background-color: #FFFFFF;
   background-image: url("../img/main/index-background-2.jpg");
   /* вот здесь у меня нюанс - нужно ли делать картинку которую я обьединил с номером -2? Или я могу взять index-background.jpg + index-background-frame+ сделать прямоугольник в СSS? */
   background-repeat: no-repeat;
@@ -100,18 +102,28 @@ body {
   margin: 0 auto;
 }
 
+/* класс для того чтобы все содержимое было заужено относительно основной страницы */
+.page-inner-container {
+  width:1056px;
+  margin:auto;
+  color:#FFFFFF;
+  outline: 5px solid rgba(255, 99, 78, 0.5);
+  outline-offset: -5px
+}
+
 .sedona-logo-link {
   display: block;
   margin: 0 auto;
 }
 
 .main-inner {
-  color: white;
-  background-color: #83b3d3;
+  color: #000000;
+  background-color: #FFFFFF;
   background-image: url("../img/catalog/catalog-background.jpg");
   /* вот здесь у меня нюанс - нужно ли делать картинку которую я обьединил с номером -2? Или я могу взять index-background.jpg + index-background-frame+ сделать прямоугольник в СSS? */
   background-repeat: no-repeat;
   background-size: 100% auto;
+  margin: 0 auto;
 }
 
 .sedona-definition {
@@ -137,7 +149,7 @@ body {
 
 .advantages-list-item {
   width: 1200px;
-  color: white;
+  color: #FFFFFF;
   background-color: #83b3d3;
 }
 
@@ -168,7 +180,6 @@ body {
   padding: 0;
   display: flex;
   justify-content: space-between;
-  display: flex;
 }
 
 .advantages-description-clarification-item {
@@ -176,20 +187,20 @@ body {
 }
 
 .advantages-description-clarification-item:first-child {
-  color: black;
-  background-color: white;
+  color: #000000;
+  background-color: #FFFFFF;
   background-image: url("../img/icons/background-advantages-1.png");
   background-size: 100% auto;
 }
 
 .advantages-description-clarification-item:nth-child(2) {
-  color: black;
-  background-color: white;
+  color: #000000;
+  background-color: #FFFFFF;
 }
 
 .advantages-description-clarification-item:nth-child(3) {
-  color: black;
-  background-color: white;
+  color: #000000;
+  background-color: #FFFFFF;
   background-image: url("../img/icons/background-advantages-1.png");
   background-size: 100% auto;
 }
@@ -197,16 +208,16 @@ body {
 .advantages-list-item:nth-child(3),
 .advantages-list-item:nth-child(5) {
   width: 400px;
-  color: black;
-  background-color: white;
+  color: #000000;
+  background-color: #FFFFFF;
   background-image: url("../img/icons/background-advantages-1.png");
   background-size: 100% auto;
 }
 
 .advantages-list-item:nth-child(4) {
   width: 400px;
-  color: black;
-  background-color: white;
+  color: #000000;
+  background-color: #FFFFFF;
   background-image: url("../img/icons/background-advantages-2.png");
   background-size: 100% auto;
 }
@@ -236,7 +247,7 @@ body {
 }
 
 .newsletter {
-  color: white;
+  color: #FFFFFF;
   background-color: #83b3d3;
   background-size: 100% auto;
   background-image: url("../img/main/newsletter-background.jpg");
@@ -263,8 +274,8 @@ body {
 }
 
 .catalog-items {
-  color: black;
-  background-color: white;
+  color: #000000;
+  background-color: #FFFFFF;
   text-align: left;
   font-weight: 400;
   font-size: 18px;
@@ -274,17 +285,17 @@ body {
 input[type="Email"] {
   font-size: 18px;
   line-height: 26px;
-  color: black;
-  background-color: white;
+  color: #000000;
+  background-color: #FFFFFF;
 }
 
 .button.subscribe {
-  color: white;
+  color: #FFFFFF;
   background-color: #83b3d3;
 }
 
 .phone-number-link {
-  color: black;
+  color: #000000;
   font-weight: 400;
   font-size: 40px;
   line-height: 240px;
@@ -300,11 +311,12 @@ input[type="Email"] {
   /* разместил свойство текста для адекватного расположения надписи по макету */
 }
 
-.newsletter {
+.newsletter,.newsletter-catalog {
   width: 100%;
 }
 
 .social-links {
+  margin-left:72px;
   max-width: 120px;
 }
 
@@ -315,17 +327,18 @@ input[type="Email"] {
 
 .site-makers-link {
   width: 120px;
+  margin-right:72px;
 }
 /* кнопки внизу иконками на этом этапе пока не заменял */
 .button.filter {
-  color: white;
+  color: #FFFFFF;
   background-color: #83b3d3;
 }
 
 .button.return {
   font-weight: 400;
   line-height: 23px;
-  color: white;
+  color: #FFFFFF;
   background-color: inherit;
   text-transform: none;
 }
@@ -354,6 +367,28 @@ input[type="Email"] {
   line-height: 24px;
 }
 
+.catalog-filters-form{
+  display:flex;
+}
+
+.catalog-filter-groups:first-child {
+width:150px;
+margin-right:67px;
+}
+
+.catalog-filter-groups:nth-child(2) {
+  width:150px;
+  margin-right:167px;
+}
+
+.buttons-list {
+  margin: 0;
+  padding:0;
+  max-width:160px;
+  margin-left:81px;
+}
+
+
 .search-results {
   font-weight: 700;
   font-size: 30px;
@@ -368,7 +403,7 @@ input[type="Email"] {
 }
 
 .hotel-cards-link {
-  color: black;
+  color: #000000;
   font-weight: 700;
   font-size: 24px;
   line-height: 31px;
@@ -394,7 +429,7 @@ input[type="Email"] {
 }
 
 .pagination-link {
-  color: white;
+  color: #FFFFFF;
   font-weight: 700;
   background-color: #83b3d3;
   font-size: 20px;

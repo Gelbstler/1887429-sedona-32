@@ -2,7 +2,7 @@
 <html lang="ru">
   <head>
     <meta charset="utf-8" />
-    <title>Главная страница</title>
+    <title>Каталог</title>
     <link rel="stylesheet" href="styles/styles.css" />
   </head>
   <body>
@@ -19,19 +19,12 @@
             <a class="navigation-link-current" href="#">Гостиницы</a>
           </li>
         </ul>
-      </nav>
-      <p>
+      <p class="navigation-logo">
         <a class="header-logo">
-          <img
-            class="header-logo-icon"
-            src="img/main/sedona-logo.png"
-            width="138"
-            height="70"
-            alt="Логотип Седоны"
-          />
+          <img class="header-logo-icon" src="img/main/sedona-logo.png" width="138" height="70" alt="Логотип Седоны" />
         </a>
       </p>
-      <ul class="user-menu">
+      <ul class="navigation-list user-menu">
         <li>
           <a class="user-menu-item" href="#">
             <span class="visually-hidden">Поиск</span>
@@ -43,11 +36,14 @@
           </a>
         </li>
         <li>
-          <a class="button" href="#">Хочу сюда</a>
+          <a class="button" href="#">Хочу сюда!</a>
         </li>
       </ul>
+    </nav>
     </header>
     <main class="main-inner">
+      <div class="page-container">
+        <div class="page-inner-container">
       <header class="main-inner-header">
         <h1 class="main-inner-title">Гостиницы Седоны</h1>
         <ul class="breadcrumbs-list">
@@ -62,7 +58,7 @@
         </ul>
       </header>
       <section class="catalog-filters">
-        <h2 class="visually-hidden">Список фильтров</h2>
+        <h2 class="visually-hidden" hidden>Список фильтров</h2>
         <form
           class="catalog-filters-form"
           action="https://echo.htmlacademy.ru/"
@@ -338,8 +334,11 @@
           </button>
         </form>
       </section>
+    </div>
+    </div>
     </main>
     <footer class="page-footer">
+      <div class="page-footer-container">
       <section class="newsletter-catalog">
         <h2 class="newsletter-form-title">Подпишитесь на рассылку</h2>
         <p class="newsletter-form-description">
@@ -387,7 +386,7 @@
       </section>
       <section class="phone-number">
         <h2 class="visually-hidden">Телефон для брони</h2>
-        <a class="phone-number-link" href="tel:+78128121212">+7 (812)-12-12</a>
+        <a class="phone-number-link" href="tel:+78128121212">+7 (812) 812-12-12</a>
       </section>
       <section class="site-makers-link">
         <h2 class="visually-hidden">Ссылка на сайт Академии</h2>
@@ -395,6 +394,7 @@
           <span class="visually-hidden">Сайт Академии</span></a
         >
       </section>
+    </div>
     </footer>
   </body>
 </html>
