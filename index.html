@@ -19,13 +19,12 @@
             <a class="navigation-link" href="#">Гостиницы</a>
           </li>
         </ul>
-      </nav>
-      <p>
+      <p class="navigation-logo">
         <a class="header-logo">
           <img class="header-logo-icon" src="img/main/sedona-logo.png" width="138" height="70" alt="Логотип Седоны" />
         </a>
       </p>
-      <ul class="user-menu">
+      <ul class="navigation-list user-menu">
         <li>
           <a class="user-menu-item" href="#">
             <span class="visually-hidden">Поиск</span>
@@ -40,8 +39,10 @@
           <a class="button" href="#">Хочу сюда!</a>
         </li>
       </ul>
+    </nav>
     </header>
-    <main class="main-index">
+    <main class="main-container main-index">
+      <div class="page-container">
       <h1 class="visually-hidden">Добро пожаловать в Седону</h1>
       <a class="sedona-logo-link" href="#">
         <img class="sedona-logo-welcome" src="img/main/welcome-logo.png" width="458" height="352"  alt="Добро пожаловать в Седону" />
@@ -60,18 +61,23 @@
         </p>
         <ol class="advantages-list">
           <li class="advantages-list-item">
+            <div class="item-container">
+              <div class="info-container">
+              <!-- добавлен для норм расположения элементов в блоке 1 -->
             <h3 class="advantages-title">Настоящий городок</h3>
             <p class="advantages-description">
               Седона - не аттракцион,<br />
               для туристов, там течет<br />
               своя жизнь
             </p>
+          </div>
             <img
               class="advantages-description-picture"
               src="img/main/advantage-1.jpg" width="800" height="384"
               alt="Домик в Седонe"
             />
-            <ul class="advantages-description-clarification">
+          </div>
+            <ul class="advantages-description-clarification-list">
               <li class="advantages-description-clarification-item">
                 <h3 class="advantages-description-clarification-header">
                   Жильё
@@ -100,17 +106,21 @@
             </ul>
           </li>
           <li class="advantages-list-item">
+            <div class="item-container">
+              <div class="info-container">
             <h3 class="advantages-title">Там есть мост дьявола</h3>
             <p class="advantages-description">
               Да, по нему можно пройти!<br />
               Если вы осмелитесь,<br />
               разумеется
             </p>
+            </div>
             <img
               class="advantages-description-picture "
               src="img/main/advantage-2.jpg" width="800" height="384"
               alt="Знаменитый мост дьявола"
             />
+          </div>
           </li>
           <li class="advantages-list-item">
             <h3 class="advantages-title">Небольшая площадь</h3>
@@ -145,8 +155,10 @@
           >Поиск гостиницы в Седоне</a
         >
       </section>
+    </div>
     </main>
     <footer class="page-footer">
+      <div class="page-footer-container">
       <section class="newsletter">
         <h2 class="newsletter-form-title">Подпишитесь на рассылку</h2>
         <p class="newsletter-form-description">
@@ -202,6 +214,7 @@
           <span class="visually-hidden">Сайт Академии</span></a
         >
       </section>
+    </div>
     </footer>
   </body>
 </html>

@@ -14,12 +14,44 @@
   font-display: swap;
 }
 
+html {
+  height: 100%;
+}
+
 body {
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
   background-color: white;
   color: black;
   font-family: "PT Sans", sans-serif;
   font-size: 18px;
   line-height: 21px;
+}
+
+.page-navigation {
+  display: flex;
+  width: 1200px;
+  margin: 0 auto;
+}
+
+.navigation-list {
+  margin: 0;
+  padding: 0;
+  width: 410px;
+  /* размер с запасом на элемент */
+}
+.user-menu {
+  max-width: 270px;
+  /* размер с запасом на элемент */
+  margin-left: auto;
+}
+
+.navigation-logo {
+  margin: auto;
+  /* пока решил что таким свойством будет проще всего выровнять этот элемент внутри шапки, но не уверен  */
+  width: 140px;
 }
 
 .navigation-link,
@@ -31,8 +63,12 @@ body {
   text-decoration: none;
   text-align: left;
 }
-.navigation-link-current{
+.navigation-link-current {
   text-decoration: underline;
+}
+
+.main-container {
+  flex-grow: 1;
 }
 
 .button {
@@ -54,8 +90,19 @@ body {
   background-image: url("../img/main/index-background-2.jpg");
   /* вот здесь у меня нюанс - нужно ли делать картинку которую я обьединил с номером -2? Или я могу взять index-background.jpg + index-background-frame+ сделать прямоугольник в СSS? */
   background-repeat: no-repeat;
-  background-size: 100% auto;
+  background-size: auto;
   text-align: center;
+  margin: 0 auto;
+}
+
+.page-container {
+  width: 1200px;
+  margin: 0 auto;
+}
+
+.sedona-logo-link {
+  display: block;
+  margin: 0 auto;
 }
 
 .main-inner {
@@ -65,9 +112,7 @@ body {
   /* вот здесь у меня нюанс - нужно ли делать картинку которую я обьединил с номером -2? Или я могу взять index-background.jpg + index-background-frame+ сделать прямоугольник в СSS? */
   background-repeat: no-repeat;
   background-size: 100% auto;
-  text-align: left;
 }
-
 
 .sedona-definition {
   font-weight: 400;
@@ -82,9 +127,31 @@ body {
   text-align: center;
 }
 
+.advantages-list {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
 .advantages-list-item {
+  width: 1200px;
   color: white;
   background-color: #83b3d3;
+}
+
+.item-container {
+  display: flex;
+}
+
+.item-container:last-child {
+  display: flex;
+  flex-direction: row-reverse;
+}
+
+.info-container {
+  width: 400px;
 }
 
 .advantages-title,
@@ -94,6 +161,18 @@ body {
   text-align: center;
   text-transform: uppercase;
   line-height: 28px;
+}
+
+.advantages-description-clarification-list {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: space-between;
+  display: flex;
+}
+
+.advantages-description-clarification-item {
+  width: 400px;
 }
 
 .advantages-description-clarification-item:first-child {
@@ -117,6 +196,7 @@ body {
 
 .advantages-list-item:nth-child(3),
 .advantages-list-item:nth-child(5) {
+  width: 400px;
   color: black;
   background-color: white;
   background-image: url("../img/icons/background-advantages-1.png");
@@ -124,6 +204,7 @@ body {
 }
 
 .advantages-list-item:nth-child(4) {
+  width: 400px;
   color: black;
   background-color: white;
   background-image: url("../img/icons/background-advantages-2.png");
@@ -155,7 +236,6 @@ body {
 }
 
 .newsletter {
-  height: 411px;
   color: white;
   background-color: #83b3d3;
   background-size: 100% auto;
@@ -164,19 +244,19 @@ body {
   text-align: center;
 }
 
-.newsletter-catalog{
+.newsletter-catalog {
   height: 411px;
   text-align: center;
 }
 
-.newsletter-form-title{
+.newsletter-form-title {
   font-weight: 700;
   font-size: 30px;
   line-height: 36px;
   text-transform: uppercase;
 }
 
-.newsletter-form-description{
+.newsletter-form-description {
   font-weight: 400;
   font-size: 22px;
   line-height: 26px;
@@ -192,8 +272,8 @@ body {
 }
 
 input[type="Email"] {
-  font-size:18px;
-  line-height :26px;
+  font-size: 18px;
+  line-height: 26px;
   color: black;
   background-color: white;
 }
@@ -204,14 +284,38 @@ input[type="Email"] {
 }
 
 .phone-number-link {
-  color:black;
+  color: black;
   font-weight: 400;
   font-size: 40px;
   line-height: 240px;
   text-decoration: none;
-  text-align: center;
 }
 
+.page-footer-container {
+  display: flex;
+  width: 1200px;
+  margin: 0 auto;
+  flex-wrap: wrap;
+  text-align: center;
+  /* разместил свойство текста для адекватного расположения надписи по макету */
+}
+
+.newsletter {
+  width: 100%;
+}
+
+.social-links {
+  max-width: 120px;
+}
+
+.phone-number {
+  width: 720px;
+  margin-left: 62px;
+}
+
+.site-makers-link {
+  width: 120px;
+}
 /* кнопки внизу иконками на этом этапе пока не заменял */
 .button.filter {
   color: white;
@@ -220,7 +324,7 @@ input[type="Email"] {
 
 .button.return {
   font-weight: 400;
-  line-height:23px;
+  line-height: 23px;
   color: white;
   background-color: inherit;
   text-transform: none;
@@ -232,7 +336,7 @@ input[type="Email"] {
   line-height: 78px;
 }
 
-.breadcrumbs-item{
+.breadcrumbs-item {
   font-weight: 400;
   font-size: 16px;
   line-height: 21px;
@@ -250,49 +354,49 @@ input[type="Email"] {
   line-height: 24px;
 }
 
-.search-results{
+.search-results {
   font-weight: 700;
   font-size: 30px;
   line-height: 39px;
   text-transform: uppercase;
 }
 
-.type-control{
+.type-control {
   font-weight: 400;
   font-size: 18px;
   line-height: 24px;
 }
 
 .hotel-cards-link {
-  color:black;
+  color: black;
   font-weight: 700;
   font-size: 24px;
   line-height: 31px;
   text-decoration: none;
 }
 
-.favourites{
+.favourites {
   background-color: #83b3d3;
   font-size: 16px;
 }
 
-.hotel-cards-rating{
-  background-color:#F2F2F2 ;
+.hotel-cards-rating {
+  background-color: #f2f2f2;
   text-transform: uppercase;
-  text-align:center;
+  text-align: center;
 }
 
-.load-all{
-  background-color:#83B3D3 ;
+.load-all {
+  background-color: #83b3d3;
   font-size: 20px;
   line-height: 26px;
   text-align: center;
 }
 
 .pagination-link {
-  color:white;
-  font-weight:700 ;
-  background-color:#83B3D3 ;
+  color: white;
+  font-weight: 700;
+  background-color: #83b3d3;
   font-size: 20px;
   line-height: 26px;
   text-align: center;
