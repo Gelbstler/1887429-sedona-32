@@ -56,23 +56,30 @@ body {
   display:flex;
   flex-wrap: wrap;
   align-items: center;
+  outline: 5px solid rgba(255, 99, 78, 0.5);
+  outline-offset: -5px;
   /* размер с запасом на элемент */
 }
 
 .user-menu {
+  margin:0;
+  padding:0;
+  list-style-type: none;
+  justify-content: flex-end;
   max-width: 270px;
   /* размер с запасом на элемент */
   margin-left: auto;
   margin-right: 72px;
-  outline: 5px solid rgba(255, 99, 78, 0.5);
-  outline-offset: -5px;
   /* не понимаю откуда у меня берутся мариджины сверху примерна по 1px */
 }
 
 .navigation-logo {
-  margin:auto;
+  margin:0;
+  display:block;
+  position:absolute;
   margin-top:0;
-  margin-left: 65px;
+  right:50%;
+  left:50%;
   width: 140px;
 }
 
@@ -85,7 +92,9 @@ body {
   text-decoration: none;
   text-align: left;
   display:block;
-  padding:20px 17px;
+  padding:20px 16px;
+  outline: 5px solid rgba(255, 99, 78, 0.5);
+  outline-offset: -5px;
 }
 
 .navigation-link-current {
@@ -359,7 +368,7 @@ body {
 }
 
 .newsletter-container {
-  /* добавил контейнер для формы отправки , пока на всякий случай */
+  /* добавил контейнер для формы отправки , потом переверстаю на гридах */
   display:flex;
   justify-content: center;
   height:60px;
@@ -372,7 +381,7 @@ body {
   padding:0;
 }
 
-input[type="Email"] {
+.field {
   font-size: 18px;
   line-height: 26px;
   color: #000000;
@@ -393,7 +402,7 @@ input[type="Email"] {
   color: #000000;
   font-weight: 400;
   font-size: 40px;
-  line-height: 240px;
+  line-height: 40px;
   text-decoration: none;
 }
 
@@ -435,15 +444,14 @@ input[type="Email"] {
 }
 
 .social-links-item:nth-child(3n){
-margin-right: 0;
+  margin-right: 0;
 }
 
 .phone-number {
-  outline: 5px solid rgba(255, 99, 78, 0.5);
-  outline-offset: -5px;
   /* не понимаю почему эта секция занимает ОГРОМНЫЙ прямоугольник, при том что я не задавал ей размеры */
   width: 720px;
   margin-left: 62px;
+  margin-bottom:30px;
 }
 
 .site-makers-link {
@@ -467,11 +475,11 @@ margin-right: 0;
 }
 
 .main-inner-title{
-font-weight: 700;
-font-size: 60px;
-margin:0;
-margin-bottom:5px;
-line-height: 78px;
+  font-weight: 700;
+  font-size: 60px;
+  margin:0;
+  margin-bottom:5px;
+  line-height: 78px;
 }
 
 .breadcrumbs-list{
