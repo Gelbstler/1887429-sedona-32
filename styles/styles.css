@@ -62,7 +62,7 @@ body {
   padding: 0;
   list-style-type: none;
   justify-content: flex-end;
-  max-width: 270px;
+  max-width: 320px;
   /* размер с запасом на элемент */
   margin-left: auto;
   margin-right: 72px;
@@ -88,6 +88,7 @@ body {
 
 .navigation-link,
 .navigation-link-current {
+  position: relative;
   box-sizing: border-box;
   color: #000000;
   line-height: 26px;
@@ -110,10 +111,14 @@ body {
   outline: none;
 }
 
-.navigation-item.current:after {
+.navigation-link-current::before {
   position: absolute;
-  border-bottom: 2px solid #756257;
-  /* не уверен насчет такой реализации */
+  right: 12px;
+  bottom: -15px;
+  left: 12px;
+  height: 2px;
+  background-color: #756257;
+  content: "";
 }
 
 .user-menu-link {
@@ -154,6 +159,7 @@ body {
   box-sizing: border-box;
   width: 160px;
   border-radius: 4px;
+  margin-left: 22px;
 }
 
 .user-menu-link.button:hover {
@@ -163,7 +169,7 @@ body {
 .user-menu-link.button:focus {
   border-radius: 10px;
   color: #ffffff;
-  box-shadow: inset 0 0 0 3px #83b3d3;
+  box-shadow: 0 0 0 3px #83b3d3;
   outline: none;
 }
 
@@ -197,13 +203,36 @@ body {
   height: 48px;
 }
 
+.filter:hover {
+  background-color: #68a2ca;
+}
+
+.filter:focus {
+  border-radius: 10px;
+  box-shadow: inset 0 0 0 3px #ffffff;
+  outline: none;
+}
+
 .button.return {
   font-size: 18px;
   font-weight: 400;
   line-height: 23px;
   color: #ffffff;
+  width: 100px;
+  padding-top: 5px;
+  padding-bottom: 5px;
   background-color: inherit;
   text-transform: none;
+  border-radius: 4px;
+}
+
+.button.return:hover {
+  opacity: 0.6;
+}
+
+.button.return:focus {
+  box-shadow: inset 0 0 0 3px #83b3d3;
+  outline: none;
 }
 
 .buttons-list {
@@ -236,13 +265,35 @@ body {
   place-items: center;
 }
 
+.button.info:hover {
+  background-color: #615048;
+}
+
+.button.info:focus {
+  box-shadow: 0 0 0 3px #83b3d3;
+  outline: none;
+}
+
 .favourites {
   background-color: #83b3d3;
   font-size: 16px;
 }
 
+.favourites:hover {
+  background-color: #68a2ca;
+}
+
+.favourites:focus {
+  box-shadow: 0 0 0 3px #756257;
+  outline: none;
+}
+
 .favourites.chosen {
   background-color: #7db54f;
+}
+
+.favourites.chosen:hover {
+  background-color: #6c9e42;
 }
 
 li.buttons-item:first-child {
@@ -304,7 +355,7 @@ li.buttons-item:last-child {
 
 .sedona-definition {
   margin: 0;
-  margin-bottom: 23px;
+  margin-bottom: 34px;
   font-weight: 400;
   font-size: 30px;
   line-height: 36px;
@@ -492,23 +543,29 @@ li.buttons-item:last-child {
   font-size: 30px;
   line-height: 36px;
   text-transform: uppercase;
+  margin-bottom: 28px;
 }
 
 .hotel-finder-description {
+  margin: 0;
   font-weight: 400;
   font-size: 22px;
   line-height: 26px;
-  margin-bottom: 73px;
+  margin-bottom: 62px;
 }
 
 .hotel-finder-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: auto;
+  margin-right: auto;
   font-weight: 700;
   font-size: 20px;
   line-height: 36px;
-  display: inline-block;
   border-radius: 10px;
   width: 575px;
-  padding: 17px 0px;
+  height: 60px;
   margin-bottom: 91px;
 }
 
@@ -524,6 +581,7 @@ li.buttons-item:last-child {
 
 .page-footer-container {
   display: flex;
+  justify-content: space-between;
   width: 1200px;
   margin: 0 auto;
   flex-wrap: wrap;
@@ -533,6 +591,7 @@ li.buttons-item:last-child {
 .footer-contacts-container {
   display: flex;
   align-items: center;
+  justify-content: space-between;
   margin-bottom: 25px;
   /* задал для выравнивания элементов */
 }
@@ -548,7 +607,7 @@ li.buttons-item:last-child {
 .newsletter,
 .newsletter-catalog {
   width: 100%;
-  margin-bottom: 25px;
+  margin-bottom: 22px;
   outline: 5px solid rgba(255, 99, 78, 0.5);
   outline-offset: -5px;
   text-align: center;
@@ -592,6 +651,7 @@ li.buttons-item:last-child {
   outline-offset: -5px;
   margin-bottom: 94px;
   grid-template-columns: 600px 200px;
+  height: 60px;
 }
 
 .field {
@@ -602,8 +662,8 @@ li.buttons-item:last-child {
   width: 600px;
   border: none;
   border-radius: 10px 0px 0px 10px;
-  padding: 20px;
   box-sizing: border-box;
+  padding-left: 22px;
   /* пока не точно */
 }
 
@@ -617,7 +677,7 @@ li.buttons-item:last-child {
 }
 
 .social-links {
-  margin-left: 72px;
+  margin-left: 61px;
 }
 
 .social-links-list {
@@ -626,12 +686,13 @@ li.buttons-item:last-child {
   margin: 0;
   padding: 0;
   list-style-type: none;
-  margin-right: 61px;
+  margin-right: 52px;
   max-width: 130px;
 }
 
 .social-links-item {
   margin-right: 3px;
+  position: relative;
 }
 
 .social-links-item:nth-child(3n) {
@@ -647,7 +708,17 @@ li.buttons-item:last-child {
   border-radius: 10px;
 }
 
-.media:hover social-link-svg {
+.social-link-svg {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto;
+  fill: #83b3d3;
+}
+
+.media:hover .social-link-svg {
   fill: #68a2ca;
 }
 
@@ -684,13 +755,15 @@ li.buttons-item:last-child {
   outline: none;
 }
 
-.site-makers-link {
+.makers {
+  display: block;
   position: relative;
   width: 120px;
-  margin-right: auto;
+  margin-left: 50px;
   height: 70px;
   border-radius: 10px;
 }
+
 .makers-link-svg {
   position: absolute;
   top: 0;
@@ -698,17 +771,16 @@ li.buttons-item:last-child {
   bottom: 0;
   left: 0;
   margin: auto;
+  fill: #000000;
 }
 
 .makers:hover .makers-link-svg {
-  color: #756257;
-  /* тоже не работает */
+  fill: #756257;
 }
 
 .makers:focus {
   box-shadow: inset 0 0 0 3px #83b3d3;
   outline: none;
-  /* тоже не работает */
 }
 
 .main-inner-title {
@@ -719,6 +791,7 @@ li.buttons-item:last-child {
   line-height: 78px;
 }
 
+/* Breadcrumbs */
 .breadcrumbs-list {
   display: flex;
   margin: 0;
@@ -728,10 +801,54 @@ li.buttons-item:last-child {
 }
 
 .breadcrumbs-item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
   font-weight: 400;
   font-size: 16px;
   line-height: 21px;
   margin-right: 26px;
+  outline: 5px solid rgba(255, 99, 78, 0.5);
+  outline-offset: -5px;
+}
+
+.breadcrumbs-button-home {
+  display: block;
+  width: 28px;
+  height: 28px;
+}
+
+.breadcrumbs-button-current {
+  color: #ffffff;
+  text-decoration: none;
+}
+
+.breadcrumbs-button-home::after {
+  position: absolute;
+  width: 5px;
+  height: 8px;
+  background-size: 5px 8px;
+  background-image: url("..img/icons/nav-link.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  content: "";
+  left: 30px;
+  /* не пашет иконка, также не знаю как ей состояние задать при наведении( */
+}
+
+.breadcrumbs-link-svg {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto;
+  fill: #ffffff;
+}
+
+.breadcrumbs-item:hover {
+  opacity: 0.6;
 }
 
 .catalog-filters {
@@ -745,7 +862,13 @@ li.buttons-item:last-child {
   line-height: 26px;
 }
 
+.catalog-filter-list {
+  margin: 0;
+  padding: 0;
+}
+
 .catalog-filter-item {
+  list-style-type: none;
   font-weight: 400;
   font-size: 18px;
   line-height: 24px;
@@ -811,10 +934,10 @@ li.buttons-item:last-child {
 
 .visual-sort {
   display: block;
-  outline: 5px solid rgba(230, 16, 16, 0.5);
-  outline-offset: -5px;
+  border: 2px solid #e6e6e6;
+  border-radius: 4px;
   /* оставил чтобы было видно кнопки */
-  background-image: url("../img/icons/mode-tile\ 1.svg");
+  background-image: url("../img/icons/mode-tile.svg");
   background-repeat: no-repeat;
   background-position: center;
   background-size: 16px 14px;
@@ -823,16 +946,29 @@ li.buttons-item:last-child {
 }
 
 .visual-sort.mode-slideshow {
-  background-image: url("../img/icons/mode-slideshow\ 1.svg");
+  background-image: url("../img/icons/mode-slideshow.svg");
 }
 
 .visual-sort.mode-list {
-  background-image: url("../img/icons/mode-list\ 1.svg");
-  /* эта иконка не показывается( */
+  background-image: url("../img/icons/mode-list.svg");
 }
 
 .visual-sort-item:last-child {
   margin-right: 0;
+}
+
+.mode-list.current {
+  border: 2px solid #000000;
+}
+
+.visual-sort:hover {
+  border: 2px solid #83b3d3;
+  outline: none;
+}
+
+.visual-sort:focus {
+  border: 2px solid #83b3d3;
+  outline: none;
 }
 
 .search-results {
@@ -853,6 +989,19 @@ li.buttons-item:last-child {
   padding: 12px;
   padding-right: 60px;
   width: 287px;
+  border-radius: 4px;
+  border: 2px solid #e6e6e6;
+  /* не знаю как тут закастомить стрелочку */
+}
+
+.type-control:hover {
+  border: 2px solid #83b3d3;
+  outline: none;
+}
+
+.type-control:focus {
+  border: 2px solid #83b3d3;
+  outline: none;
 }
 
 /* Начало разметки страниц гостиниц */
@@ -867,6 +1016,17 @@ li.buttons-item:last-child {
 .hotel-cards-title {
   font-size: 24px;
   margin: 0;
+}
+
+.hotel-cards-title:hover {
+  color: #756257;
+}
+
+.hotel-cards-link:focus {
+  border-radius: 10px;
+  box-shadow: inset 0 0 0 3px #83b3d3;
+  /* тут вообще не понимаю как сделать по макету, в макете огромная рамка под это назание гостиницы
+  которая будет залезать на нижние названия */
 }
 
 .hotel-cards-items {
@@ -909,10 +1069,55 @@ li.buttons-item:last-child {
 }
 
 .hotel-cards-rating {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   background-color: #f2f2f2;
   text-transform: uppercase;
   text-align: center;
-  order: -1;
+  border-radius: 4px;
+  height: 37px;
+}
+
+.hotel-cards-items:first-of-type .hotel-cards-rating::before {
+  position: absolute;
+  bottom: 72px;
+  content: "";
+  width: 98px;
+  height: 17px;
+  background-image: url("../img/icons/star.svg");
+  background-size: 25px 17px;
+}
+
+.hotel-cards-items:nth-of-type(2) .hotel-cards-rating::before {
+  position: absolute;
+  bottom: 72px;
+  content: "";
+  width: 70px;
+  height: 17px;
+  background-image: url("../img/icons/star.svg");
+  background-size: 25px 17px;
+}
+
+.hotel-cards-items:nth-of-type(3) .hotel-cards-rating::before {
+  position: absolute;
+  bottom: 72px;
+  content: "";
+  width: 55px;
+  height: 17px;
+  background-image: url("../img/icons/star.svg");
+  background-size: 25px 17px;
+}
+
+.hotel-cards-items:nth-of-type(4) .hotel-cards-rating::before {
+  position: absolute;
+  bottom: 72px;
+  content: "";
+  width: 55px;
+  height: 17px;
+  background-image: url("../img/icons/star.svg");
+  background-size: 25px 17px;
 }
 
 .hotel-cards-stars {
@@ -931,9 +1136,17 @@ li.buttons-item:last-child {
 .button.load-all {
   padding: 10px;
   margin-bottom: 30px;
-  /* надо ли выносить кнопку в отдельный контейнер? */
   width: 625px;
   margin-left: 217px;
+}
+
+.button.load-all:hover {
+  background-color: #68a2ca;
+}
+
+.button.load-all:focus {
+  box-shadow: 0 0 0 3px #756257;
+  outline: none;
 }
 
 .pagination {
@@ -968,6 +1181,18 @@ li.buttons-item:last-child {
   font-size: 18px;
   width: 160px;
   padding: 13px;
+  border: 2px solid #e6e6e6;
+  border-radius: 4px;
+}
+
+.control-number:hover {
+  border: 2px solid #83b3d3;
+  outline: none;
+}
+
+.control-number:focus {
+  border: 2px solid #83b3d3;
+  outline: none;
 }
 
 .pagination-link {
@@ -983,4 +1208,19 @@ li.buttons-item:last-child {
   font-size: 20px;
   line-height: 26px;
   text-align: center;
+  border-radius: 4px;
+}
+
+.pagination-current {
+  background-color: #f2f2f2;
+  color: #000000;
+}
+
+.pagination-link:hover {
+  background-color: #68a2ca;
+}
+
+.pagination-link:focus {
+  box-shadow: 0 0 0 3px #756257;
+  outline: none;
 }
