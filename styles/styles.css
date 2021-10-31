@@ -1043,9 +1043,21 @@ li.buttons-item:last-child {
   border-bottom: 1px solid #e6e6e6;
 }
 
-.hotel-cards-picture {
+.hotel-cards-picture-link {
+  display: block;
   order: -1;
   margin-right: 36px;
+  height: 120px;
+  padding: 0;
+}
+
+.hotel-cards-picture-link:hover{
+  opacity: 0.6;
+}
+
+.hotel-cards-picture-link:focus{
+  box-shadow: 0 0 0 3px #83b3d3;
+  outline: none;
 }
 
 .hotel-cards-link {
@@ -1055,8 +1067,6 @@ li.buttons-item:last-child {
   line-height: 31px;
   text-decoration: none;
   grid-column: 1/3;
-  outline: 5px solid rgba(255, 99, 78, 0.5);
-  outline-offset: -5px;
 }
 
 .hotel-cards-rating-container {
@@ -1064,8 +1074,6 @@ li.buttons-item:last-child {
   flex-direction: column;
   width: 160px;
   justify-content: space-between;
-  outline: 5px solid rgba(255, 99, 78, 0.5);
-  outline-offset: -5px;
 }
 
 .hotel-cards-rating {
