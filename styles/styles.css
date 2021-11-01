@@ -828,13 +828,10 @@ li.buttons-item:last-child {
   position: absolute;
   width: 5px;
   height: 8px;
-  background-size: 5px 8px;
-  background-image: url("..img/icons/nav-link.svg");
-  background-repeat: no-repeat;
-  background-position: center;
-  content: "";
-  left: 30px;
-  /* не пашет иконка, также не знаю как ей состояние задать при наведении( */
+  background-image: url("../img/icons/navlink.svg");
+  content:"";
+  left: 38px;
+  top:10px;
 }
 
 .breadcrumbs-link-svg {
@@ -860,6 +857,7 @@ li.buttons-item:last-child {
   font-weight: 700;
   font-size: 20px;
   line-height: 26px;
+  margin-bottom: 30px;
 }
 
 .catalog-filter-list {
@@ -868,7 +866,6 @@ li.buttons-item:last-child {
 }
 
 .catalog-filter-item {
-  list-style-type: none;
   font-weight: 400;
   font-size: 18px;
   line-height: 24px;
@@ -886,6 +883,7 @@ li.buttons-item:last-child {
 }
 
 .catalog-filter-list {
+  list-style-type: none;
   width: 150px;
 }
 
@@ -902,17 +900,77 @@ li.buttons-item:last-child {
 }
 
 .catalog-filter-groups:nth-child(3) {
-  display: grid;
-  grid-template-columns: 144px 144px;
-  outline: 5px solid rgba(255, 99, 78, 0.5);
-  outline-offset: -5px;
+  width:287px;
   /* пока просто добавил сюда грид контейнер */
 }
 
-.catalog-price-container {
-  display: flex;
-  /* попытался сделать форму по макету и вышла дичь, форма ввода "выталкивает"
-из контейнера слова "от" и "до" */
+/* Ползунок */
+.range-scale {
+  position: relative;
+  height: 4px;
+  background-color: #FFFFFF;
+  opacity: 0.3;
+  border-radius: 4px;
+}
+
+.range-bar {
+  position: absolute;
+  height: 4px;
+  background-color: #FFFFFF;
+}
+
+.range-wrapper-inputs{
+  display:flex;
+  margin-bottom:32px;
+}
+
+/* чекбоксы */
+.control-label {
+  padding-left: 40px;
+}
+
+.control {
+  position: relative;
+  display: block;
+}
+
+.control-mark {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  background-color: #ffffff;
+  border-radius: 4px;
+}
+
+.control-mark-input[type="checkbox"]:checked +.control-mark {
+  background-image: url("../img/icons/arrow.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.control:hover .control-mark{
+  opacity:0.6;
+}
+
+.control:focus .control-mark{
+  opacity:0.6;
+  box-shadow:0 0 0 3px #83b3d3;
+  outline: none;
+}
+
+.control-mark-input[type="radio"]+.control-mark {
+  border-radius:50%;
+}
+
+.control-input[type="radio"]:checked + .control-mark::before {
+  position: absolute;
+  top: 4px;
+  left: 4px;
+  width: 10px;
+  height: 10px;
+  background-color: #242424;
+  border-radius: 50%;
+  content: "";
 }
 
 .sorting-container {
@@ -1051,11 +1109,11 @@ li.buttons-item:last-child {
   padding: 0;
 }
 
-.hotel-cards-picture-link:hover{
+.hotel-cards-picture-link:hover {
   opacity: 0.6;
 }
 
-.hotel-cards-picture-link:focus{
+.hotel-cards-picture-link:focus {
   box-shadow: 0 0 0 3px #83b3d3;
   outline: none;
 }
