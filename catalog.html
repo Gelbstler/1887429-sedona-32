@@ -69,8 +69,87 @@
                   d="M8.9 17a.9.9 0 0 1-.8-.4c-5.4-6.1-6.7-7.5-7-7.9A5.4 5.4 0 0 1 5.5 0C6.8 0 8 .5 9 1.3a5.46 5.46 0 0 1 9 4.1c0 1.3-.5 2.5-1.3 3.4l-7 7.9c-.2.2-.4.3-.8.3Zm-6-9.5c.3.4 3.5 4 6.1 6.9l6.2-7c.5-.5.7-1.2.7-2 0-1.8-1.5-3.3-3.3-3.3-1 0-2 .5-2.7 1.3-.3.3-.6.4-.9.4-.3 0-.6-.2-.8-.4-.7-.8-1.7-1.3-2.7-1.3-1.8 0-3.3 1.5-3.3 3.3-.1.9.3 1.6.7 2.1-.1 0-.1 0 0 0Z"
                 />
               </svg>
-              <span class="visually-hidden">Избранное</span>
             </a>
+            <span class="visually-hidden">Избранное</span>
+            <span class="like-counter">12</span>
+            <div class="popover popover-cart">
+              <div class="popover-content">
+                <h2 class="popover-title visually-hidden">Избранное</h2>
+                <ul class="favourite-cart-list">
+                  <li class="favourite-cart-item">
+                    <a class="favourite-cart-item-link" href="#">
+                      <img
+                        class="favourite-cart-item-picture"
+                        src="img/catalog/hotel-2.jpg"
+                        alt="Desert Quail Inn"
+                        width="48"
+                        height="48"
+                      />
+                      <div class="hotel-card-container">
+                      <p class="favourite-cart-item-title">Desert Quail Inn</p>
+                      <p class="favourite-cart-item-title-description">
+                        Мотель
+                      </p>
+                    </div>
+                    </a>
+                    <button type="button" class="cart-item-button button">
+                      <svg
+                        width="16"
+                        height="16"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <g opacity=".2" fill="#000">
+                          <path
+                            d="M15.3 2.3H.6c-.3 0-.6.2-.6.5s.3.6.6.6h1.7v12c0 .3.3.6.6.6h10.2c.3 0 .6-.3.6-.6v-12h1.7c.3 0 .6-.3.6-.6s-.4-.5-.7-.5Zm-2.8 12.5H3.4V3.4h9.1v11.4ZM6.2 1.2h3.4c.3 0 .6-.3.6-.6S10 0 9.7 0H6.2c-.3 0-.5.3-.5.6s.2.6.5.6Z"
+                          />
+                          <path
+                            d="M6.2 12c.3 0 .6-.3.6-.6V5.7c0-.3-.3-.6-.6-.6s-.6.3-.6.6v5.7c.1.3.3.6.6.6ZM9.7 12c.3 0 .6-.3.6-.6V5.7c0-.3-.3-.6-.6-.6s-.6.4-.6.6v5.7c0 .3.2.6.6.6Z"
+                          />
+                        </g>
+                      </svg>
+                    </button>
+                  </li>
+                  <li class="favourite-cart-item">
+                    <a class="favourite-cart-item-link" href="#">
+                      <img
+                        class="favourite-cart-item-picture"
+                        src="img/catalog/hotel-3.jpg"
+                  alt="Villas at Poco Diablo"
+                        width="48"
+                        height="48"
+                      />
+                      <div class="hotel-card-container">
+                      <p class="favourite-cart-item-title">Villas at Poco Diablo</p>
+                      <p class="favourite-cart-item-title-description">
+                        Апартаменты
+                      </p>
+                    </div>
+                    </a>
+                    <button type="button" class="cart-item-button button">
+                      <svg
+                        width="16"
+                        height="16"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <g opacity=".2" fill="#000">
+                          <path
+                            d="M15.3 2.3H.6c-.3 0-.6.2-.6.5s.3.6.6.6h1.7v12c0 .3.3.6.6.6h10.2c.3 0 .6-.3.6-.6v-12h1.7c.3 0 .6-.3.6-.6s-.4-.5-.7-.5Zm-2.8 12.5H3.4V3.4h9.1v11.4ZM6.2 1.2h3.4c.3 0 .6-.3.6-.6S10 0 9.7 0H6.2c-.3 0-.5.3-.5.6s.2.6.5.6Z"
+                          />
+                          <path
+                            d="M6.2 12c.3 0 .6-.3.6-.6V5.7c0-.3-.3-.6-.6-.6s-.6.3-.6.6v5.7c.1.3.3.6.6.6ZM9.7 12c.3 0 .6-.3.6-.6V5.7c0-.3-.3-.6-.6-.6s-.6.4-.6.6v5.7c0 .3.2.6.6.6Z"
+                          />
+                        </g>
+                      </svg>
+                    </button>
+                  </li>
+                </ul>
+              </div>
+              <a class="popover-close-button button" href="#">
+                <span>Все избранные</span>
+              </a>
+            </div>
           </li>
           <li class="user-menu-item">
             <a class="user-menu-link button" href="#">Хочу сюда!</a>
@@ -80,191 +159,199 @@
     </header>
     <main class="main-inner">
       <div class="page-container">
+        <header class="main-inner-header">
+          <h1 class="main-inner-title">Гостиницы Седоны</h1>
+          <ul class="breadcrumbs-list">
+            <li class="breadcrumbs-item">
+              <a class="breadcrumbs-button-home" href="#">
+                <span class="visually-hidden">На главную</span>
+                <svg
+                  class="breadcrumbs-link-svg"
+                  aria-hidden="true"
+                  focusable="false"
+                  width="12"
+                  height="12"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M6 .3 0 5.8V12h12V5.8L6 .3ZM11 11H1V6.2l5-4.5 5 4.5V11Z"
+                  />
+                  <path d="M4 10h1V7.5h2V10h1V6.5H4V10Z" />
+                </svg>
+              </a>
+            </li>
+            <li class="breadcrumbs-item">
+              <a class="breadcrumbs-button-current" href="#">Гостиницы </a>
+            </li>
+          </ul>
+        </header>
+        <!-- форма с фильтрами -->
         <div class="page-inner-container">
-          <header class="main-inner-header">
-            <h1 class="main-inner-title">Гостиницы Седоны</h1>
-            <ul class="breadcrumbs-list">
-              <li class="breadcrumbs-item">
-                <a class="breadcrumbs-button-home" href="#">
-                  <span class="visually-hidden">На главную</span>
-                  <svg
-                    class="breadcrumbs-link-svg"
-                    aria-hidden="true"
-                    focusable="false"
-                    width="12"
-                    height="12"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path
-                      d="M6 .3 0 5.8V12h12V5.8L6 .3ZM11 11H1V6.2l5-4.5 5 4.5V11Z"
-                    />
-                    <path d="M4 10h1V7.5h2V10h1V6.5H4V10Z" />
-                  </svg>
-                </a>
-              </li>
-              <li class="breadcrumbs-item">
-                <a class="breadcrumbs-button-current" href="#">Гостиницы </a>
-              </li>
-            </ul>
-          </header>
-          <!-- форма с фильтрами -->
           <section class="catalog-filters">
-            <h2 class="visually-hidden" hidden>Список фильтров</h2>
-            <form
-              class="catalog-filters-form"
-              action="https://echo.htmlacademy.ru/"
-              method="GET"
-            >
-              <div class="catalog-filter-groups">
-                <h3 class="catalog-filter-title">Инфраструктура</h3>
-                <ul class="catalog-filter-list">
-                  <li class="catalog-filter-item">
-                    <label class="control">
-                      <input
-                        class="visually-hidden control-mark-input"
-                        type="checkbox"
-                        name="Бассейн"
-                        checked
-                      />
-                      <!-- Оставляю пустые спан-ы для кастомных чекбоксов -->
-                      <span class="control-mark"></span>
-                      <span class="control-label">Бассейн</span>
-                    </label>
+            <div class="filter-form-wrapper">
+              <h2 class="visually-hidden" hidden>Список фильтров</h2>
+              <form
+                class="catalog-filters-form"
+                action="https://echo.htmlacademy.ru/"
+                method="GET"
+              >
+                <div class="catalog-filter-groups">
+                  <h3 class="catalog-filter-title">Инфраструктура:</h3>
+                  <ul class="catalog-filter-list">
+                    <li class="catalog-filter-item">
+                      <label class="control">
+                        <input
+                          class="visually-hidden control-mark-input"
+                          type="checkbox"
+                          name="Бассейн"
+                          checked
+                        />
+                        <!-- Оставляю пустые спан-ы для кастомных чекбоксов -->
+                        <span class="control-mark"></span>
+                        <span class="control-label">Бассейн</span>
+                      </label>
+                    </li>
+                    <li class="catalog-filter-item">
+                      <label class="control">
+                        <input
+                          class="visually-hidden control-mark-input"
+                          type="checkbox"
+                          name="Парковка"
+                          checked
+                        />
+                        <!-- Оставляю пустые спан-ы для кастомных чекбоксов -->
+                        <span class="control-mark"></span>
+                        <span class="control-label">Парковка</span>
+                      </label>
+                    </li>
+                    <li class="catalog-filter-item">
+                      <label class="control">
+                        <input
+                          class="visually-hidden control-mark-input"
+                          type="checkbox"
+                          name="WI-FI"
+                        />
+                        <!-- Оставляю пустые спан-ы для кастомных чекбоксов -->
+                        <span class="control-mark"></span>
+                        <span class="control-label">WI-FI</span>
+                      </label>
+                    </li>
+                  </ul>
+                </div>
+                <div class="catalog-filter-groups">
+                  <h3 class="catalog-filter-title">Тип жилья:</h3>
+                  <ul class="catalog-filter-list">
+                    <li class="catalog-filter-item">
+                      <label class="control">
+                        <input
+                          class="visually-hidden control-mark-input"
+                          type="radio"
+                          name="home-type"
+                          value="Гостиница"
+                          checked
+                        />
+                        <!-- Оставляю пустые спан-ы для кастомных чекбоксов -->
+                        <span class="control-mark"></span>
+                        <span class="control-label">Гостиница</span>
+                      </label>
+                    </li>
+                    <li class="catalog-filter-item">
+                      <label class="control">
+                        <input
+                          class="visually-hidden control-mark-input"
+                          type="radio"
+                          name="home-type"
+                          value="Мотель"
+                        />
+                        <!-- Оставляю пустые спан-ы для кастомных чекбоксов -->
+                        <span class="control-mark"></span>
+                        <span class="control-label">Мотель</span>
+                      </label>
+                    </li>
+                    <li class="catalog-filter-item">
+                      <label class="control">
+                        <input
+                          class="visually-hidden control-mark-input"
+                          type="radio"
+                          name="home-type"
+                          value="Апартаменты"
+                        />
+                        <!-- Оставляю пустые спан-ы для кастомных чекбоксов -->
+                        <span class="control-mark"></span>
+                        <span class="control-label">Апартаменты</span>
+                      </label>
+                    </li>
+                  </ul>
+                </div>
+                <div class="catalog-filter-groups">
+                  <h3 class="catalog-filter-title">Стоимость, &#8381;:</h3>
+                  <div class="range">
+                    <div class="range-wrapper-inputs">
+                      <label class="catalog-filter-label">
+                        <input
+                          class="catalog-filter-input"
+                          type="number"
+                          name="min-price"
+                          value="0"
+                        />
+                        <span class="range-wrapper">от</span>
+                      </label>
+                      <label class="catalog-filter-label">
+                        <input
+                          class="catalog-filter-input"
+                          type="number"
+                          name="max-price"
+                          value="9000"
+                        />
+                        <span class="range-wrapper">до</span>
+                      </label>
+                    </div>
+                    <div class="range-scale">
+                      <div class="range-bar" style="left: 0px; width: 216px">
+                        <button class="range-toggle toggle-min" type="button">
+                          <span class="visually-hidden"
+                            >изменить минимальную цену</span
+                          >
+                        </button>
+                        <button class="range-toggle toggle-max" type="button">
+                          <span class="visually-hidden"
+                            >изменить максимальную цену</span
+                          >
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <ul class="buttons-list">
+                  <li class="buttons-item">
+                    <button class="button filter" type="submit">
+                      Применить
+                    </button>
                   </li>
-                  <li class="catalog-filter-item">
-                    <label class="control">
-                      <input
-                        class="visually-hidden control-mark-input"
-                        type="checkbox"
-                        name="Парковка"
-                        checked
-                      />
-                      <!-- Оставляю пустые спан-ы для кастомных чекбоксов -->
-                      <span class="control-mark"></span>
-                      <span class="control-label">Парковка</span>
-                    </label>
-                  </li>
-                  <li class="catalog-filter-item">
-                    <label class="control">
-                      <input
-                        class="visually-hidden control-mark-input"
-                        type="checkbox"
-                        name="WI-FI"
-                      />
-                      <!-- Оставляю пустые спан-ы для кастомных чекбоксов -->
-                      <span class="control-mark"></span>
-                      <span class="control-label">WI-FI</span>
-                    </label>
+                  <li class="buttons-item">
+                    <a class="button return" href="#">Сбросить</a>
+                    <!-- Здесь кнопка размечена как ссылка, т к без использования JS так будет проще всего сделать возврат к предыдущим значениям (перезагрузить страницу) -->
                   </li>
                 </ul>
-              </div>
-              <div class="catalog-filter-groups">
-                <h3 class="catalog-filter-title">Тип жилья</h3>
-                <ul class="catalog-filter-list">
-                  <li class="catalog-filter-item">
-                    <label class="control">
-                      <input
-                        class="visually-hidden control-mark-input"
-                        type="radio"
-                        name="home-type"
-                        value="Гостиница"
-                        checked
-                      />
-                      <!-- Оставляю пустые спан-ы для кастомных чекбоксов -->
-                      <span class="control-mark"></span>
-                      <span class="control-label">Гостиница</span>
-                    </label>
-                  </li>
-                  <li class="catalog-filter-item">
-                    <label class="control">
-                      <input
-                        class="visually-hidden control-mark-input"
-                        type="radio"
-                        name="home-type"
-                        value="Мотель"
-                      />
-                      <!-- Оставляю пустые спан-ы для кастомных чекбоксов -->
-                      <span class="control-mark"></span>
-                      <span class="control-label">Мотель</span>
-                    </label>
-                  </li>
-                  <li class="catalog-filter-item">
-                    <label class="control">
-                      <input
-                        class="visually-hidden control-mark-input"
-                        type="radio"
-                        name="home-type"
-                        value="Апартаменты"
-                      />
-                      <!-- Оставляю пустые спан-ы для кастомных чекбоксов -->
-                      <span class="control-mark"></span>
-                      <span class="control-label">Апартаменты</span>
-                    </label>
-                  </li>
-                </ul>
-              </div>
-              <div class="catalog-filter-groups">
-                <h3 class="catalog-filter-title">Стоимость, &#8381;</h3>
-                <div class="range">
-                  <div class="range-wrapper-inputs">
-                  <input
-                    id="catalog-price-from"
-                    class="catalog-filter-input"
-                    type="number"
-                    name="min-price"
-                    value="0"
-                  />
-                  <label class="catalog-filter-label" for="catalog-price-from">
-                    От
-                  </label>
-                  <input
-                    id="catalog-price-to"
-                    class="catalog-filter-input"
-                    type="number"
-                    name="max-price"
-                    value="9000"
-                  />
-                  <label class="catalog-filter-label" for="catalog-price-to">
-                    До
-                  </label>
-                </div>
-                <div class="range-scale">
-                  <div class="range-bar" style="width:227px">
-                <button class="range-toggle toggle-min" type="button">
-                  <span class="visually-hidden">изменить минимальную цену</span>
-                </button>
-                <button class="range-toggle toggle-max" type="button">
-                  <span class="visually-hidden"
-                    >изменить максимальную цену</span
-                  >
-                </button>
-                </div>
-              </div>
-              </div>
-              <ul class="buttons-list">
-                <li class="buttons-item">
-                  <button class="button filter" type="submit">Применить</button>
-                </li>
-                <li class="buttons-item">
-                  <a class="button return" href="#">Сбросить</a>
-                  <!-- Здесь кнопка размечена как ссылка, т к без использования JS так будет проще всего сделать возврат к предыдущим значениям (перезагрузить страницу) -->
-                </li>
-              </ul>
-            </form>
+              </form>
+            </div>
           </section>
-
           <section class="catalog-items">
             <div class="sorting-container">
               <h2 class="visually-hidden">Результаты поиска</h2>
               <span class="search-results">Найдено гостиниц: 38</span>
               <form class="sorting-type">
-                <label class="visually-hidden" for="sorting">Сортировка</label>
-                <select class="type-control" id="sorting" name="sorting">
-                  <option value="сheaper">Сначала дешевые</option>
-                  <option value="expensive">Сначала дорогие</option>
-                  <option value="popular">Сначала популярные</option>
-                </select>
+                <div class="select">
+                  <label class="visually-hidden" for="sorting"
+                    >Сортировка</label
+                  >
+                  <select class="type-control" id="sorting" name="sorting">
+                    <option value="сheaper">Сначала дешевые</option>
+                    <option value="expensive">Сначала дорогие</option>
+                    <option value="popular">Сначала популярные</option>
+                  </select>
+                </div>
                 <button class="visually-hidden" type="submit">
                   Отсортировать продукты
                 </button>
@@ -304,15 +391,15 @@
                   В избранное
                 </button>
               </div>
-              <a class="hotel-cards-picture-link" href=#>
-              <img
-                class="hotel-cards-picture"
-                src="img/catalog/hotel-1.jpg"
-                width="180"
-                height="120"
-                alt="Amara Resort and Spa"
-              />
-            </a>
+              <a class="hotel-cards-picture-link" href="#">
+                <img
+                  class="hotel-cards-picture"
+                  src="img/catalog/hotel-1.jpg"
+                  width="180"
+                  height="120"
+                  alt="Amara Resort and Spa"
+                />
+              </a>
               <div class="hotel-cards-rating-container">
                 <span class="visually-hidden">4 звезды</span>
                 <!-- для кастомной оценки гостницы -->
@@ -332,14 +419,14 @@
                   В избранное
                 </button>
               </div>
-              <a class="hotel-cards-picture-link" href=#>
-              <img
-                class="hotel-cards-picture"
-                src="img/catalog/hotel-2.jpg"
-                alt="Desert Quail Inn"
-                width="180"
-                height="120"
-              />
+              <a class="hotel-cards-picture-link" href="#">
+                <img
+                  class="hotel-cards-picture"
+                  src="img/catalog/hotel-2.jpg"
+                  alt="Desert Quail Inn"
+                  width="180"
+                  height="120"
+                />
               </a>
               <div class="hotel-cards-rating-container">
                 <span class="visually-hidden">3 звезды</span>
@@ -360,15 +447,15 @@
                   В избранном
                 </button>
               </div>
-              <a class="hotel-cards-picture-link" href=#>
-              <img
-                class="hotel-cards-picture"
-                src="img/catalog/hotel-3.jpg"
-                width="180"
-                height="120"
-                alt="Villas at Poco Diablo"
-              />
-            </a>
+              <a class="hotel-cards-picture-link" href="#">
+                <img
+                  class="hotel-cards-picture"
+                  src="img/catalog/hotel-3.jpg"
+                  width="180"
+                  height="120"
+                  alt="Villas at Poco Diablo"
+                />
+              </a>
               <div class="hotel-cards-rating-container">
                 <span class="visually-hidden">2 звезды</span>
                 <!-- для кастомной оценки гостницы -->
@@ -388,15 +475,15 @@
                   В избранное
                 </button>
               </div>
-              <a class="hotel-cards-picture-link" href=#>
-              <img
-                class="hotel-cards-picture"
-                src="img/catalog/hotel-4.jpg"
-                alt="GreenTree Inn"
-                width="180"
-                height="120"
-              />
-            </a>
+              <a class="hotel-cards-picture-link" href="#">
+                <img
+                  class="hotel-cards-picture"
+                  src="img/catalog/hotel-4.jpg"
+                  alt="GreenTree Inn"
+                  width="180"
+                  height="120"
+                />
+              </a>
               <div class="hotel-cards-rating-container">
                 <span class="visually-hidden">2 звезды</span>
                 <!-- для кастомной оценки гостницы -->

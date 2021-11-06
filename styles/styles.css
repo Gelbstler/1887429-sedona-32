@@ -30,6 +30,12 @@ body {
   line-height: 21px;
 }
 
+.page-navigation,
+.main-inner,
+.page-footer-container {
+  box-shadow: 40px 0 0 #f2f2f2, -40px 0 0 #f2f2f2;
+}
+
 .visually-hidden {
   position: absolute;
   width: 1px;
@@ -72,11 +78,9 @@ body {
 
 .header-logo {
   width: 140px;
-  outline: 5px solid rgba(255, 99, 78, 0.5);
-  outline-offset: -5px;
   position: absolute;
   right: 50%;
-  left: 47%;
+  left: 46.4%;
   /* только с неровным числом добился фиксации логотипа +- посередине */
 }
 
@@ -128,8 +132,6 @@ body {
   /* как лучше сделать чтобы элементы иконок все были в один ряд? убрать у второго паддинг сверху ? */
   min-width: 18px;
   min-height: 18px;
-  outline: 5px solid rgba(255, 99, 78, 0.5);
-  outline-offset: -5px;
   border-radius: 10px;
 }
 .user-menu-icon {
@@ -173,6 +175,10 @@ body {
   outline: none;
 }
 
+.user-menu-item:nth-child(2) {
+  position: relative;
+}
+
 .main-container {
   flex-grow: 1;
   padding-top: 46px;
@@ -196,11 +202,14 @@ body {
 }
 
 .filter {
+  padding: 0;
   color: #ffffff;
   background-color: #83b3d3;
   box-sizing: border-box;
   width: 160px;
   height: 48px;
+  margin-bottom: 18px;
+  margin-top: 58px;
 }
 
 .filter:hover {
@@ -213,7 +222,9 @@ body {
   outline: none;
 }
 
-.button.return {
+.return {
+  padding: 0;
+  box-sizing: border-box;
   font-size: 18px;
   font-weight: 400;
   line-height: 23px;
@@ -236,11 +247,11 @@ body {
 }
 
 .buttons-list {
+  align-self: flex-end;
   margin: 0;
   padding: 0;
   list-style-type: none;
   max-width: 160px;
-  margin-left: 81px;
 }
 
 .button.subscribe {
@@ -296,10 +307,6 @@ body {
   background-color: #6c9e42;
 }
 
-li.buttons-item:first-child {
-  margin-bottom: 20px;
-}
-
 li.buttons-item:last-child {
   display: flex;
   justify-content: center;
@@ -326,10 +333,6 @@ li.buttons-item:last-child {
   width: 1057px;
   margin: auto;
   color: #ffffff;
-  padding-top: 35px;
-  outline: 5px solid rgba(255, 99, 78, 0.5);
-  outline-offset: -5px;
-  /* оставил подчеркивание чтобы было видно эту зауженную рамку */
 }
 
 .sedona-logo-link {
@@ -608,8 +611,6 @@ li.buttons-item:last-child {
 .newsletter-catalog {
   width: 100%;
   margin-bottom: 22px;
-  outline: 5px solid rgba(255, 99, 78, 0.5);
-  outline-offset: -5px;
   text-align: center;
 }
 
@@ -647,8 +648,6 @@ li.buttons-item:last-child {
   padding: 0;
   display: grid;
   justify-content: center;
-  outline: 5px solid rgba(255, 99, 78, 0.5);
-  outline-offset: -5px;
   margin-bottom: 94px;
   grid-template-columns: 600px 200px;
   height: 60px;
@@ -664,7 +663,6 @@ li.buttons-item:last-child {
   border-radius: 10px 0px 0px 10px;
   box-sizing: border-box;
   padding-left: 22px;
-  /* пока не точно */
 }
 
 .field:hover {
@@ -673,6 +671,11 @@ li.buttons-item:last-child {
 
 .field:focus {
   box-shadow: inset 0 0 0 3px #83b3d3;
+  outline: none;
+}
+
+.field:invalid {
+  box-shadow: inset 0 0 0 3px #ff5757;
   outline: none;
 }
 
@@ -783,45 +786,56 @@ li.buttons-item:last-child {
   outline: none;
 }
 
+.main-inner-header {
+  position: relative;
+}
+
 .main-inner-title {
   font-weight: 700;
   font-size: 60px;
   margin: 0;
-  margin-bottom: 5px;
+  margin-top: 32px;
+  margin-bottom: 64px;
+  margin-left: 71px;
   line-height: 78px;
+  color: white;
 }
 
 /* Breadcrumbs */
 .breadcrumbs-list {
+  position: absolute;
   display: flex;
   margin: 0;
   padding: 0;
+  top: 72px;
   list-style-type: none;
-  margin-bottom: 45px;
+  margin-left: 65px;
 }
 
 .breadcrumbs-item {
   display: flex;
   justify-content: center;
   align-items: center;
-  position: relative;
   font-weight: 400;
   font-size: 16px;
   line-height: 21px;
-  margin-right: 26px;
-  outline: 5px solid rgba(255, 99, 78, 0.5);
-  outline-offset: -5px;
+  margin-right: 10px;
 }
 
 .breadcrumbs-button-home {
+  position: relative;
   display: block;
   width: 28px;
   height: 28px;
+  border-radius: 4px;
+  box-sizing: border-box;
 }
 
 .breadcrumbs-button-current {
   color: #ffffff;
   text-decoration: none;
+  padding: 3px 8px;
+  border-radius: 4px;
 }
 
 .breadcrumbs-button-home::after {
@@ -829,9 +843,9 @@ li.buttons-item:last-child {
   width: 5px;
   height: 8px;
   background-image: url("../img/icons/navlink.svg");
-  content:"";
-  left: 38px;
-  top:10px;
+  content: "";
+  left: 30px;
+  top: 10px;
 }
 
 .breadcrumbs-link-svg {
@@ -848,8 +862,15 @@ li.buttons-item:last-child {
   opacity: 0.6;
 }
 
-.catalog-filters {
-  margin-bottom: 86px;
+.breadcrumbs-button-home:focus,
+.breadcrumbs-button-current:focus {
+  box-shadow: inset 0 0 0 3px #83b3d3;
+  outline: none;
+}
+
+.filter-form-wrapper {
+  height: 234px;
+  margin-bottom: 42px;
 }
 
 .catalog-filter-title {
@@ -863,6 +884,7 @@ li.buttons-item:last-child {
 .catalog-filter-list {
   margin: 0;
   padding: 0;
+  list-style-type: none;
 }
 
 .catalog-filter-item {
@@ -871,9 +893,12 @@ li.buttons-item:last-child {
   line-height: 24px;
 }
 
+.catalog-filter-item:not(:last-child) {
+  margin-bottom: 12px;
+}
+
 .catalog-filters-form {
   display: flex;
-  margin-bottom: 127px;
 }
 
 .catalog-filter-groups {
@@ -890,48 +915,121 @@ li.buttons-item:last-child {
 .catalog-filter-groups:first-child {
   /* несмотрея на заданную ширину, все равно контейнер получается уже чем нужно */
   margin-right: 67px;
-  outline: 5px solid rgba(255, 99, 78, 0.5);
-  outline-offset: -5px;
 }
 
 .catalog-filter-groups:nth-child(2) {
   width: 150px;
-  margin-right: 167px;
+  margin-right: 162px;
+}
+
+.catalog-filter-groups:nth-child(3) .catalog-filter-title {
+  margin-bottom: 33px;
 }
 
 .catalog-filter-groups:nth-child(3) {
-  width:287px;
-  /* пока просто добавил сюда грид контейнер */
+  width: 287px;
+  margin-right: 81px;
 }
 
 /* Ползунок */
 .range-scale {
   position: relative;
   height: 4px;
-  background-color: #FFFFFF;
-  opacity: 0.3;
+  background-color: rgba(255, 255, 255, 0.3);
   border-radius: 4px;
 }
 
 .range-bar {
   position: absolute;
   height: 4px;
-  background-color: #FFFFFF;
+  background-color: #ffffff;
 }
 
-.range-wrapper-inputs{
-  display:flex;
-  margin-bottom:32px;
+.range-wrapper-inputs {
+  display: flex;
+  margin-bottom: 30px;
+  justify-content: center;
+}
+
+.range-toggle {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  border: none;
+  background: #ffffff;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.toggle-min {
+  top: -8px;
+  left: 0px;
+}
+
+.toggle-max {
+  top: -8px;
+  left: 216px;
+}
+
+.range-toggle:active {
+  outline: 3px solid #83b3d3;
+}
+
+.range-toggle:focus {
+  outline: 2px solid #83b3d3;
+}
+
+.catalog-filter-label {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 144px;
+  font: inherit;
+  text-align: center;
+  border: 2px solid #ffffff;
+  border-right: 1px;
+  border-radius: 4px;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+  color: #ffffff;
+  padding: 12px 15px 9px 15px;
+}
+
+.range-wrapper {
+  display: block;
+  text-align: center;
+  opacity: 0.3;
+}
+
+.catalog-filter-label:last-of-type {
+  border-left: 1px;
+  border-radius: 4px;
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+  border-right: 2px solid #ffffff;
+  border-left: 2px solid #ffffff;
+}
+
+.catalog-filter-input {
+  font: inherit;
+  color: #ffffff;
+  width: 70px;
+  border: none;
+  background-color: transparent;
+  appearance: textfield;
+}
+
+.catalog-filter-input::-webkit-outer-spin-button,
+.catalog-filter-input::-webkit-inner-spin-button {
+  appearance: none;
+  margin: 0;
 }
 
 /* чекбоксы */
-.control-label {
-  padding-left: 40px;
-}
-
 .control {
   position: relative;
   display: block;
+  padding-left: 40px;
 }
 
 .control-mark {
@@ -940,42 +1038,46 @@ li.buttons-item:last-child {
   height: 20px;
   background-color: #ffffff;
   border-radius: 4px;
+  left: 0px;
+  top: 0px;
 }
 
-.control-mark-input[type="checkbox"]:checked +.control-mark {
+.control-mark-input[type="checkbox"]:checked + .control-mark {
   background-image: url("../img/icons/arrow.svg");
   background-position: center;
   background-repeat: no-repeat;
 }
 
-.control:hover .control-mark{
-  opacity:0.6;
+.control:hover .control-mark {
+  opacity: 0.6;
 }
 
-.control:focus .control-mark{
-  opacity:0.6;
-  box-shadow:0 0 0 3px #83b3d3;
+.control-mark-input[type="checkbox"]:focus .control-mark {
+  opacity: 0.6;
+  border: 3px solid #83b3d3;
   outline: none;
+  /* не работает это состояние, в чем может быть прикол? */
 }
 
-.control-mark-input[type="radio"]+.control-mark {
-  border-radius:50%;
+.control-mark-input[type="radio"] + .control-mark {
+  border-radius: 50%;
 }
 
-.control-input[type="radio"]:checked + .control-mark::before {
+.control-mark-input[type="radio"]:checked + .control-mark::before {
   position: absolute;
-  top: 4px;
-  left: 4px;
+  top: 5px;
+  left: 5px;
   width: 10px;
   height: 10px;
-  background-color: #242424;
+  background-color: #3f5e72;
   border-radius: 50%;
   content: "";
 }
 
 .sorting-container {
   display: flex;
-  margin-bottom: 45px;
+  align-items: center;
+  margin-bottom: 40px;
 }
 
 .visual-sort-list {
@@ -992,6 +1094,7 @@ li.buttons-item:last-child {
 
 .visual-sort {
   display: block;
+  box-sizing: border-box;
   border: 2px solid #e6e6e6;
   border-radius: 4px;
   /* оставил чтобы было видно кнопки */
@@ -1039,17 +1142,31 @@ li.buttons-item:last-child {
   margin-right: 192px;
 }
 
+.select {
+  position: relative;
+  display: flex;
+  align-items: center;
+  width: 287px;
+  margin-right: auto;
+}
+
 .type-control {
+  flex-grow: 1;
   margin: 0;
+  font-family: inherit;
   font-weight: 400;
   font-size: 18px;
   line-height: 24px;
   padding: 12px;
+  padding-left: 17px;
   padding-right: 60px;
-  width: 287px;
+  background-color: #ffffff;
+  background-image: url("../img/icons/type-dropdown.svg");
+  background-repeat: no-repeat;
+  background-position: right 19px center;
   border-radius: 4px;
   border: 2px solid #e6e6e6;
-  /* не знаю как тут закастомить стрелочку */
+  appearance: none;
 }
 
 .type-control:hover {
@@ -1091,8 +1208,8 @@ li.buttons-item:last-child {
   display: flex;
   margin: 0;
   padding: 0;
-  padding-top: 31px;
-  padding-bottom: 31px;
+  padding-top: 30px;
+  padding-bottom: 30px;
   border-top: 1px solid #e6e6e6;
 }
 
@@ -1135,6 +1252,8 @@ li.buttons-item:last-child {
 }
 
 .hotel-cards-rating {
+  font-size: 16px;
+  line-height: 21px;
   position: relative;
   display: flex;
   align-items: center;
@@ -1146,9 +1265,9 @@ li.buttons-item:last-child {
   height: 37px;
 }
 
-.hotel-cards-items:first-of-type .hotel-cards-rating::before {
+.hotel-cards-items .hotel-cards-rating::before {
   position: absolute;
-  bottom: 72px;
+  bottom: 100px;
   content: "";
   width: 98px;
   height: 17px;
@@ -1157,33 +1276,15 @@ li.buttons-item:last-child {
 }
 
 .hotel-cards-items:nth-of-type(2) .hotel-cards-rating::before {
-  position: absolute;
-  bottom: 72px;
-  content: "";
-  width: 70px;
-  height: 17px;
-  background-image: url("../img/icons/star.svg");
-  background-size: 25px 17px;
+  width: 75px;
 }
 
 .hotel-cards-items:nth-of-type(3) .hotel-cards-rating::before {
-  position: absolute;
-  bottom: 72px;
-  content: "";
-  width: 55px;
-  height: 17px;
-  background-image: url("../img/icons/star.svg");
-  background-size: 25px 17px;
+  width: 50px;
 }
 
 .hotel-cards-items:nth-of-type(4) .hotel-cards-rating::before {
-  position: absolute;
-  bottom: 72px;
-  content: "";
-  width: 55px;
-  height: 17px;
-  background-image: url("../img/icons/star.svg");
-  background-size: 25px 17px;
+  width: 50px;
 }
 
 .hotel-cards-stars {
@@ -1194,6 +1295,7 @@ li.buttons-item:last-child {
 
 .load-all {
   background-color: #83b3d3;
+  height: 55px;
   font-size: 20px;
   line-height: 26px;
   text-align: center;
@@ -1224,7 +1326,7 @@ li.buttons-item:last-child {
 
 .pagination-container {
   display: flex;
-  padding-top: 31px;
+  padding-top: 30px;
   border-top: 1px solid #e6e6e6;
 }
 
@@ -1244,9 +1346,15 @@ li.buttons-item:last-child {
 }
 
 .control-number {
+  font-family: "PT Sans", sans-serif;
   font-size: 18px;
+  appearance: none;
   width: 160px;
   padding: 13px;
+  background-color: #ffffff;
+  background-image: url("../img/icons/type-dropdown.svg");
+  background-repeat: no-repeat;
+  background-position: right 19px center;
   border: 2px solid #e6e6e6;
   border-radius: 4px;
 }
@@ -1289,4 +1397,435 @@ li.buttons-item:last-child {
 .pagination-link:focus {
   box-shadow: 0 0 0 3px #756257;
   outline: none;
+}
+
+.like-counter {
+  font-size: 10px;
+  color: white;
+  position: absolute;
+  left: 22px;
+  bottom: 19px;
+  background-color: #7db54f;
+  text-align: center;
+  width: 19px;
+  height: 19px;
+  border-radius: 50%;
+}
+
+.popover {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  box-sizing: border-box;
+  top: 47px;
+  left: -182px;
+  width: 400px;
+  font-family: "PT Sans", sans-serif;
+  color: #242424;
+  background-color: #ffffff;
+  min-height: 232px;
+  box-shadow: 0px 25px 50px rgba(0, 0, 0, 0.15);
+  border-radius: 20px;
+  z-index: 2;
+  display: none;
+}
+
+.popover:before {
+  position: absolute;
+  top: -20px;
+  left: 188px;
+  background-image: url("../img/icons/Vector.svg");
+  /* не могу придумать с этим треугольником мелким ничего( */
+  background-repeat: no-repeat;
+  content: "";
+  width: 20px;
+  height: 20px;
+}
+
+.popover-content {
+  flex-grow: 1;
+  padding: 15px;
+  border: 1px solid #e6e6e6;
+  border-radius: 20px;
+  border-bottom: none;
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+}
+
+.favourite-cart-list {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+.favourite-cart-item {
+  display: flex;
+  justify-content: space-between;
+  align-content: center;
+}
+
+.favourite-cart-item:not(:last-child) {
+  margin-bottom: 5px;
+}
+
+.favourite-cart-item-link {
+  box-sizing: border-box;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-decoration: none;
+  color: #000000;
+  padding: 10px;
+  border-radius: 10px;
+  height: 68px;
+}
+
+.favourite-cart-item-link:hover {
+  opacity: 0.3;
+}
+
+.favourite-cart-item-link:focus {
+  outline: 3px solid #83b3d3;
+}
+
+.favourite-cart-item-picture {
+  display: block;
+  border-radius: 50%;
+  margin-right: 17px;
+}
+
+.favourite-cart-item-title {
+  font-size: 18px;
+  font-weight: 700;
+  margin: 0;
+  padding: 0;
+}
+
+.favourite-cart-item-title-description {
+  font-size: 16px;
+  font-weight: 400;
+  margin: 0;
+  padding: 0;
+}
+
+.cart-item-button {
+  margin-top: 8px;
+  align-self: flex-start;
+  display: block;
+  box-sizing: border-box;
+  padding: 10px;
+  background-color: white;
+}
+
+.popover-close-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-transform: uppercase;
+  font-family: PT Sans;
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 21px;
+  height: 60px;
+  background: #756257;
+  border-radius: 0;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+  z-index: 1;
+}
+
+.modal-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(242, 242, 242, 0.8);
+}
+
+.modal {
+  position: relative;
+  margin: auto;
+  box-shadow: 0px 25px 50px rgba(0, 0, 0, 0.15);
+  background-color: #ffffff;
+  border-radius: 30px;
+  padding-right: 70px;
+  padding-left: 70px;
+  padding-top: 62px;
+  padding-bottom: 70px;
+}
+
+.modal-booking {
+  width: 715px;
+  box-sizing: border-box;
+}
+
+.modal-close-button {
+  position: absolute;
+  top: 54px;
+  right: 70px;
+  width: 53px;
+  height: 53px;
+  border: none;
+  border-radius: 50%;
+  background-color: #f2f2f2;
+  background-image: url(../img/icons/close.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  cursor: pointer;
+}
+
+.modal-close-button:hover {
+  background-color: #e6e6e6;
+}
+
+.modal-close-button:focus {
+  outline: 3px solid #83b3d3;
+}
+
+.modal-title {
+  margin: 0;
+  padding: 0;
+  margin-bottom: 32px;
+  font-family: PT Sans;
+  font-weight: 700;
+  font-size: 30px;
+  line-height: 40px;
+  text-transform: uppercase;
+}
+
+.model-content {
+  display: flex;
+  flex-direction: column;
+}
+
+.booking-form {
+  display: grid;
+  grid-template-columns: 288px 230px;
+  grid-template-rows: 50px 50px 50px 60px;
+  row-gap: 40px;
+  column-gap: 56px;
+}
+
+.field-group {
+  padding: 0;
+  margin: 0;
+  grid-column: 1/-1;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.modal-label {
+  font-weight: 700;
+  font-size: 18px;
+  width: 155px;
+}
+
+.field-modal {
+  align-self: stretch;
+  padding: 0;
+  font-family: inherit;
+  font-size: 18px;
+  line-height: 26px;
+  font-weight: 700;
+  color: #000000;
+  background-color: #f2f2f2;
+  border: none;
+  border-radius: 4px;
+  box-sizing: border-box;
+  padding-left: 19px;
+  flex-grow: 1;
+  background-image: url(../img/icons/booking.svg);
+  background-repeat: no-repeat;
+  background-size: 15px 15px;
+  background-position: center right 19px;
+}
+
+.field-modal:hover {
+  background-color: #e6e6e6;
+}
+
+.field-modal:focus {
+  box-shadow: 0 0 0 3px #83b3d3;
+  outline: none;
+}
+
+.field-modal:invalid {
+  box-shadow: inset 0 0 0 3px #ff5757;
+  outline: none;
+}
+
+.booking-submit {
+  font-size: 20px;
+  padding: 0;
+  background: #83b3d3;
+  border-radius: 10px;
+  grid-column: 1/-1;
+  grid-row: 4/5;
+}
+
+.adult-counter {
+  grid-column: 1/2;
+  grid-row: 3/4;
+  justify-content: start;
+}
+
+.child-counter {
+  grid-column: 2/3;
+  grid-row: 3/4;
+  justify-content: start;
+}
+
+.counter-input-wrapper {
+  display: flex;
+  align-self: stretch;
+  width: 133px;
+}
+
+.counter::-webkit-outer-spin-button,
+.counter::-webkit-inner-spin-button {
+  appearance: none;
+  margin: 0;
+}
+
+.counter {
+  font-family: inherit;
+  font-size: 18px;
+  line-height: 26px;
+  font-weight: 700;
+  color: #000000;
+  background-color: #f2f2f2;
+  border: none;
+  appearance: none;
+  padding: 0;
+  width: 33px;
+  text-align: center;
+}
+
+.button-counter {
+  margin: 0;
+  padding: 0;
+  border: none;
+  outline: none;
+  width: 49px;
+  background-color: #f2f2f2;
+  flex-grow: 1;
+  position: relative;
+}
+
+.minus {
+  border-top-left-radius: 4px;
+  border-bottom-left-radius: 4px;
+}
+
+.minus::after {
+  left: 19px;
+  position: absolute;
+  content: "";
+  height: 1px;
+  width: 12px;
+  background: rgba(0, 0, 0, 0.3);
+}
+
+.plus {
+  border-top-right-radius: 4px;
+  border-bottom-right-radius: 4px;
+}
+
+.plus::after {
+  position: absolute;
+  right: 19px;
+  content: "";
+  height: 1px;
+  width: 12px;
+  background: rgba(0, 0, 0, 0.3);
+}
+
+.plus::before {
+  position: absolute;
+  content: "";
+  height: 1px;
+  width: 12px;
+  background: rgba(0, 0, 0, 0.3);
+  transform: rotate(-90deg);
+  right: 19px;
+}
+
+.child-label {
+  position: relative;
+}
+
+.info {
+  position: absolute;
+  width: 25px;
+  height: 25px;
+  background-color: #83b3d3;
+  border-radius: 50%;
+  border: none;
+  right: 222px;
+  color: white;
+}
+
+.button-counter:focus::after {
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  margin: auto;
+  width: 25px;
+  height: 25px;
+  background: none;
+  outline: 3px solid #83b3d3;
+  border: none;
+  border-radius: 4px;
+  content: "";
+  /* с помощью этого пппытался создать по стайлгайду обводку вокруг + и- , но в итоге это стирает одну палку. как лучше эт сделать? */
+}
+
+.info:hover {
+  background-color: #68a2ca;
+}
+
+.info-wrapper {
+  display: none;
+  box-sizing: border-box;
+  padding-left: 22px;
+  padding-right: 18px;
+  padding-top: 15px;
+  padding-bottom: 18px;
+  position: absolute;
+  width: 256px;
+  height: 143px;
+  background: #333333;
+  box-shadow: 0px 15px 30px rgba(0, 0, 0, 0.3);
+  border-radius: 10px;
+  font-family: PT Sans;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 20px;
+  text-align: left;
+  left: -120px;
+  top: 45px;
+}
+
+.info-wrapper::before {
+  top: -8px;
+  left: 124px;
+  position: absolute;
+  content: "";
+  width: 19px;
+  height: 19px;
+  background: #333333;
+  transform: rotate(-45deg);
+}
+
+.info:hover .info-wrapper {
+  display: block;
+}
+
+.modal-container-close {
+  display: none;
 }
