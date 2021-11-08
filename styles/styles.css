@@ -69,11 +69,9 @@ body {
   list-style-type: none;
   justify-content: flex-end;
   max-width: 320px;
-  /* размер с запасом на элемент */
   margin-left: auto;
   margin-right: 72px;
   align-items: center;
-  /* не понимаю откуда у меня берутся мариджины сверху примерна по 1px */
 }
 
 .header-logo {
@@ -81,7 +79,6 @@ body {
   position: absolute;
   right: 50%;
   left: 46.4%;
-  /* только с неровным числом добился фиксации логотипа +- посередине */
 }
 
 .navigation-item {
@@ -129,7 +126,6 @@ body {
   display: block;
   position: relative;
   padding: 10px 10px;
-  /* как лучше сделать чтобы элементы иконок все были в один ряд? убрать у второго паддинг сверху ? */
   min-width: 18px;
   min-height: 18px;
   border-radius: 10px;
@@ -1052,11 +1048,9 @@ li.buttons-item:last-child {
   opacity: 0.6;
 }
 
-.control-mark-input[type="checkbox"]:focus .control-mark {
+.control-mark-input[type="checkbox"]:focus ~.control-mark {
   opacity: 0.6;
-  border: 3px solid #83b3d3;
-  outline: none;
-  /* не работает это состояние, в чем может быть прикол? */
+  outline: 3px solid #83b3d3;
 }
 
 .control-mark-input[type="radio"] + .control-mark {
@@ -1072,6 +1066,11 @@ li.buttons-item:last-child {
   background-color: #3f5e72;
   border-radius: 50%;
   content: "";
+}
+
+.control-mark-input[type="radio"]:focus ~.control-mark {
+  opacity: 0.6;
+  outline: 3px solid #83b3d3;
 }
 
 .sorting-container {
@@ -1432,14 +1431,17 @@ li.buttons-item:last-child {
 
 .popover:before {
   position: absolute;
-  top: -20px;
-  left: 188px;
-  background-image: url("../img/icons/Vector.svg");
-  /* не могу придумать с этим треугольником мелким ничего( */
+  top: -10px;
+  left: 191px;
   background-repeat: no-repeat;
   content: "";
   width: 20px;
   height: 20px;
+  background-color: white;
+  border: 1px solid #e6e6e6;
+  border-right:none;
+  border-bottom: none;
+  transform:rotate(45deg);
 }
 
 .popover-content {
@@ -1652,10 +1654,19 @@ li.buttons-item:last-child {
   outline: none;
 }
 
-.field-modal:invalid {
-  box-shadow: inset 0 0 0 3px #ff5757;
-  outline: none;
+.field-modal::after{
+  position: absolute;
+  color:#FF5757;
+  content:"Мы не можем отправить вас в прошлое.";
+  width:420px;
+  height:29px;
 }
+
+.field-modal:invalid {
+color:red;
+}
+
+/* не знаю как сделать invalid с учетом того что у нас type=text задается+ впринципе мое сообщение не выводится в форме */
 
 .booking-submit {
   font-size: 20px;
@@ -1664,6 +1675,14 @@ li.buttons-item:last-child {
   border-radius: 10px;
   grid-column: 1/-1;
   grid-row: 4/5;
+}
+
+.booking-submit:hover{
+  background: #68A2CA;
+}
+
+.booking-submit:focus{
+  outline:3px solid #756257;
 }
 
 .adult-counter {
