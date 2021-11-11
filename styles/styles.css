@@ -77,8 +77,11 @@ body {
 .header-logo {
   width: 140px;
   position: absolute;
-  right: 50%;
-  left: 46.4%;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
 }
 
 .navigation-item {
@@ -112,6 +115,11 @@ body {
   outline: none;
 }
 
+.navigation-link:active {
+  opacity: 0.3;
+  box-shadow: none;
+}
+
 .navigation-link-current::before {
   position: absolute;
   right: 12px;
@@ -130,6 +138,7 @@ body {
   min-height: 18px;
   border-radius: 10px;
 }
+
 .user-menu-icon {
   position: absolute;
   top: 0;
@@ -142,7 +151,6 @@ body {
 
 .user-menu-link:hover .user-menu-icon {
   fill: #756257;
-  /* не работает( */
 }
 
 .user-menu-link:focus {
@@ -151,9 +159,14 @@ body {
   outline: none;
 }
 
+.user-menu-link:active {
+  color: rgba(255, 255, 255, 0.3);
+  box-shadow: none;
+}
+
 .user-menu-link.button {
-  padding-top: 10px;
-  padding-bottom: 10px;
+  padding-top: 8px;
+  padding-bottom: 8px;
   box-sizing: border-box;
   width: 160px;
   border-radius: 4px;
@@ -165,10 +178,15 @@ body {
 }
 
 .user-menu-link.button:focus {
-  border-radius: 10px;
   color: #ffffff;
   box-shadow: 0 0 0 3px #83b3d3;
   outline: none;
+}
+
+.user-menu-link.button:active {
+  color: rgba(255, 255, 255, 0.3);
+  box-shadow: none;
+  /* чет не могу придумать как сделать так чтобы чисто буквы менялись на прозрачные */
 }
 
 .user-menu-item:nth-child(2) {
@@ -177,7 +195,7 @@ body {
 
 .main-container {
   flex-grow: 1;
-  padding-top: 46px;
+  box-shadow: 40px 0 0 #f2f2f2, -40px 0 0 #f2f2f2;
 }
 
 .button {
@@ -187,7 +205,6 @@ body {
   cursor: pointer;
   background-color: #756257;
   border-radius: 4px;
-  /* на этом этапе вроде не нужно задавать эту тему, но я решил попробовать с закруглениями */
   font-weight: 700;
   font-size: 16px;
   text-decoration: none;
@@ -203,7 +220,7 @@ body {
   background-color: #83b3d3;
   box-sizing: border-box;
   width: 160px;
-  height: 48px;
+  min-height: 48px;
   margin-bottom: 18px;
   margin-top: 58px;
 }
@@ -213,9 +230,7 @@ body {
 }
 
 .filter:focus {
-  border-radius: 10px;
-  box-shadow: inset 0 0 0 3px #ffffff;
-  outline: none;
+  outline: 3px solid #ffffff;
 }
 
 .return {
@@ -255,7 +270,8 @@ body {
   background-color: #83b3d3;
   padding: 20px;
   font-size: 20px;
-  border-radius: 0px 10px 10px 0px;
+  border-radius: 0 10px 10px 0;
+  max-height: 153px;
 }
 
 .button.subscribe:hover {
@@ -265,6 +281,11 @@ body {
 .button.subscribe:focus {
   box-shadow: inset 0 0 0 3px #756257;
   outline: none;
+}
+
+.button.subscribe:active {
+  opacity: 0.3;
+  box-shadow: none;
 }
 
 .button.info {
@@ -281,6 +302,11 @@ body {
   outline: none;
 }
 
+.button.info:active {
+  box-shadow: none;
+  color: rgba(255, 255, 255, 0.3);
+}
+
 .favourites {
   background-color: #83b3d3;
   font-size: 16px;
@@ -293,6 +319,11 @@ body {
 .favourites:focus {
   box-shadow: 0 0 0 3px #756257;
   outline: none;
+}
+
+.favourites:active {
+  color: rgba(255, 255, 255, 0.3);
+  box-shadow: none;
 }
 
 .favourites.chosen {
@@ -312,7 +343,6 @@ li.buttons-item:last-child {
   color: #000000;
   background-color: #ffffff;
   background-image: url("../img/main/index-background-2.jpg");
-  /* вот здесь у меня нюанс - нужно ли делать картинку которую я обьединил с номером -2? Или я могу взять index-background.jpg + index-background-frame+ сделать прямоугольник в СSS? */
   background-repeat: no-repeat;
   background-size: auto;
   text-align: center;
@@ -324,7 +354,6 @@ li.buttons-item:last-child {
   margin: 0 auto;
 }
 
-/* класс для того чтобы все содержимое было заужено относительно основной страницы */
 .page-inner-container {
   width: 1057px;
   margin: auto;
@@ -339,14 +368,14 @@ li.buttons-item:last-child {
 .sedona-logo-welcome {
   display: block;
   margin: 0 auto;
-  margin-bottom: 146px;
+  margin-bottom: 143px;
+  margin-top: 52px;
 }
 
 .main-inner {
   color: #000000;
   background-color: #ffffff;
   background-image: url("../img/catalog/catalog-background.jpg");
-  /* вот здесь у меня нюанс - нужно ли делать картинку которую я обьединил с номером -2? Или я могу взять index-background.jpg + index-background-frame+ сделать прямоугольник в СSS? */
   background-repeat: no-repeat;
   background-size: 100% auto;
   margin: 0 auto;
@@ -377,29 +406,34 @@ li.buttons-item:last-child {
 .advantages-list {
   margin: 0;
   padding: 0;
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: 400px 400px 400px;
   list-style-type: none;
+  margin-bottom: 87px;
 }
 
 .advantages-list-item {
-  width: 1200px;
   color: #ffffff;
   background-color: #83b3d3;
+  min-height: 344px;
+  font-weight: 400;
 }
 
-.item-container {
+.advantages-list-item:first-child,
+.advantages-list-item:nth-child(2) {
   display: flex;
+  flex-wrap: wrap;
+  grid-column: 1/4;
+  align-items: center;
 }
 
-.item-container:last-child {
-  display: flex;
+.advantages-list-item:nth-child(2) {
   flex-direction: row-reverse;
 }
 
-.info-container {
+.advantages-with-photo-wrapper {
   width: 400px;
+  min-height: 384px;
 }
 
 .advantages-title,
@@ -419,16 +453,15 @@ li.buttons-item:last-child {
   counter-increment: number;
 }
 
-.advantages-title:after {
+.advantages-title::after {
   position: absolute;
   left: 50%;
   width: 250px;
   margin-left: -125px;
-  bottom: -55px;
-  /* я этот размер брал примерноб т.к по макету не знаю как прикинуть */
+  bottom: -50px;
   font-weight: 400;
   font-size: 18px;
-  content: "- № " counter(number) " -";
+  content: "— №" counter(number) " —";
 }
 
 .advantages-description-clarification-header {
@@ -439,16 +472,15 @@ li.buttons-item:last-child {
 .advantages-description,
 .advantages-description-clarification {
   margin: 0;
-  margin-bottom: 79px;
-  height: 73px;
-  /* cогласно макету */
+  margin-bottom: 80px;
+  min-height: 73px;
 }
 
 .advantages-description-clarification-list {
   margin: 0;
   padding: 0;
-  display: flex;
-  justify-content: space-between;
+  display: grid;
+  grid-template-columns: 400px 400px 400px;
   list-style-type: none;
 }
 
@@ -457,7 +489,7 @@ li.buttons-item:last-child {
   position: relative;
 }
 
-.advantages-description-clarification-item:first-child:before {
+.advantages-description-clarification-item:first-child::before {
   position: absolute;
   width: 74px;
   height: 74px;
@@ -469,7 +501,7 @@ li.buttons-item:last-child {
   content: "";
 }
 
-.advantages-description-clarification-item:nth-child(2):before {
+.advantages-description-clarification-item:nth-child(2)::before {
   position: absolute;
   width: 74px;
   height: 74px;
@@ -481,7 +513,7 @@ li.buttons-item:last-child {
   content: "";
 }
 
-.advantages-description-clarification-item:nth-child(3):before {
+.advantages-description-clarification-item:nth-child(3)::before {
   position: absolute;
   width: 74px;
   height: 74px;
@@ -519,7 +551,6 @@ li.buttons-item:last-child {
   background-color: #ffffff;
   background-image: url("../img/icons/background-advantages-1.png");
   background-size: 100% auto;
-  margin-bottom: 91px;
 }
 
 .advantages-list-item:nth-child(4) {
@@ -528,12 +559,10 @@ li.buttons-item:last-child {
   background-color: #ffffff;
   background-image: url("../img/icons/background-advantages-2.png");
   background-size: 100% auto;
-  margin-bottom: 91px;
 }
 
 .hotel-finder {
   background-size: 1200px 417px;
-  /* это для себя для примерной разметки */
 }
 
 .hotel-finder-title {
@@ -542,7 +571,7 @@ li.buttons-item:last-child {
   font-size: 30px;
   line-height: 36px;
   text-transform: uppercase;
-  margin-bottom: 28px;
+  margin-bottom: 30px;
 }
 
 .hotel-finder-description {
@@ -578,13 +607,18 @@ li.buttons-item:last-child {
   outline: none;
 }
 
+.hotel-finder-link.button:active {
+  color: rgba(255, 255, 255, 0.3);
+  box-shadow: none;
+  outline: none;
+}
+
 .page-footer-container {
   display: flex;
   justify-content: space-between;
   width: 1200px;
   margin: 0 auto;
   flex-wrap: wrap;
-  /* разместил свойство текста для адекватного расположения надписи по макету */
 }
 
 .footer-contacts-container {
@@ -592,7 +626,6 @@ li.buttons-item:last-child {
   align-items: center;
   justify-content: space-between;
   margin-bottom: 25px;
-  /* задал для выравнивания элементов */
 }
 
 .newsletter {
@@ -601,6 +634,7 @@ li.buttons-item:last-child {
   background-image: url("../img/main/newsletter-background.jpg");
   background-repeat: no-repeat;
   text-align: center;
+  padding-top: 91px;
 }
 
 .newsletter,
@@ -610,6 +644,10 @@ li.buttons-item:last-child {
   text-align: center;
 }
 
+.newsletter-catalog {
+  margin-bottom: 66px;
+}
+
 .newsletter-form-title {
   font-weight: 700;
   font-size: 30px;
@@ -617,7 +655,6 @@ li.buttons-item:last-child {
   text-transform: uppercase;
   height: 50px;
   margin: 0;
-  margin-top: 94px;
   margin-bottom: 15px;
 }
 
@@ -637,6 +674,7 @@ li.buttons-item:last-child {
   font-weight: 400;
   font-size: 18px;
   line-height: 24px;
+  margin-bottom: 80px;
 }
 
 .newsletter-email {
@@ -650,13 +688,14 @@ li.buttons-item:last-child {
 }
 
 .field {
+  font-family: inherit;
   font-size: 18px;
   line-height: 26px;
   color: #000000;
   background-color: #f2f2f2;
   width: 600px;
   border: none;
-  border-radius: 10px 0px 0px 10px;
+  border-radius: 10px 0 0 10px;
   box-sizing: border-box;
   padding-left: 22px;
 }
@@ -672,6 +711,11 @@ li.buttons-item:last-child {
 
 .field:invalid {
   box-shadow: inset 0 0 0 3px #ff5757;
+  outline: none;
+}
+
+.field:active {
+  box-shadow: inset 0 0 0 2px #000000;
   outline: none;
 }
 
@@ -726,6 +770,11 @@ li.buttons-item:last-child {
   outline: none;
 }
 
+.media:active {
+  opacity: 0.3;
+  box-shadow: none;
+}
+
 .phone-number {
   width: 720px;
   margin-right: auto;
@@ -752,6 +801,11 @@ li.buttons-item:last-child {
 .phone-number-link:focus {
   box-shadow: inset 0 0 0 3px #83b3d3;
   outline: none;
+}
+
+.phone-number-link:active {
+  opacity: 0.3;
+  box-shadow: none;
 }
 
 .makers {
@@ -782,6 +836,11 @@ li.buttons-item:last-child {
   outline: none;
 }
 
+.makers:active {
+  opacity: 0.3;
+  box-shadow: none;
+}
+
 .main-inner-header {
   position: relative;
 }
@@ -794,13 +853,14 @@ li.buttons-item:last-child {
   margin-bottom: 64px;
   margin-left: 71px;
   line-height: 78px;
-  color: white;
+  color: #ffffff;
 }
 
 /* Breadcrumbs */
 .breadcrumbs-list {
   position: absolute;
   display: flex;
+  flex-wrap: wrap;
   margin: 0;
   padding: 0;
   top: 72px;
@@ -865,7 +925,7 @@ li.buttons-item:last-child {
 }
 
 .filter-form-wrapper {
-  height: 234px;
+  min-height: 234px;
   margin-bottom: 42px;
 }
 
@@ -881,6 +941,7 @@ li.buttons-item:last-child {
   margin: 0;
   padding: 0;
   list-style-type: none;
+  width: 150px;
 }
 
 .catalog-filter-item {
@@ -901,15 +962,10 @@ li.buttons-item:last-child {
   margin: 0;
   padding: 0;
   border: none;
-}
-
-.catalog-filter-list {
-  list-style-type: none;
-  width: 150px;
+  max-width: 287px;
 }
 
 .catalog-filter-groups:first-child {
-  /* несмотрея на заданную ширину, все равно контейнер получается уже чем нужно */
   margin-right: 67px;
 }
 
@@ -928,6 +984,10 @@ li.buttons-item:last-child {
 }
 
 /* Ползунок */
+.range {
+  max-width: 290px;
+}
+
 .range-scale {
   position: relative;
   height: 4px;
@@ -959,7 +1019,7 @@ li.buttons-item:last-child {
 
 .toggle-min {
   top: -8px;
-  left: 0px;
+  left: 0;
 }
 
 .toggle-max {
@@ -967,11 +1027,11 @@ li.buttons-item:last-child {
   left: 216px;
 }
 
-.range-toggle:active {
+.range-toggle:focus {
   outline: 3px solid #83b3d3;
 }
 
-.range-toggle:focus {
+.range-toggle:active {
   outline: 2px solid #83b3d3;
 }
 
@@ -998,7 +1058,6 @@ li.buttons-item:last-child {
 }
 
 .catalog-filter-label:last-of-type {
-  border-left: 1px;
   border-radius: 4px;
   border-top-left-radius: 0;
   border-bottom-left-radius: 0;
@@ -1021,7 +1080,26 @@ li.buttons-item:last-child {
   margin: 0;
 }
 
-/* чекбоксы */
+.catalog-filter-input:focus {
+  outline: none;
+}
+
+.catalog-filter-label:hover {
+  border-color: rgba(255, 255, 255, 0.3);
+}
+
+.catalog-filter-label:focus-within {
+  box-shadow: 0 0 0 3px #81b3d2, inset 0 0 0 3px #81b3d2;
+  outline: none;
+}
+
+.catalog-filter-label:active {
+  background-color: #756257;
+  box-shadow: none;
+  border-color: #ffffff;
+}
+
+/* Filters*/
 .control {
   position: relative;
   display: block;
@@ -1034,13 +1112,13 @@ li.buttons-item:last-child {
   height: 20px;
   background-color: #ffffff;
   border-radius: 4px;
-  left: 0px;
-  top: 0px;
+  left: 0;
+  top: 0;
 }
 
 .control-mark-input[type="checkbox"]:checked + .control-mark {
   background-image: url("../img/icons/arrow.svg");
-  background-position: center;
+  background-position: 70% center;
   background-repeat: no-repeat;
 }
 
@@ -1048,9 +1126,14 @@ li.buttons-item:last-child {
   opacity: 0.6;
 }
 
-.control-mark-input[type="checkbox"]:focus ~.control-mark {
+.control-mark-input[type="checkbox"]:focus ~ .control-mark {
   opacity: 0.6;
   outline: 3px solid #83b3d3;
+}
+
+.control-mark-input[type="checkbox"]:active ~ .control-mark {
+  opacity: 0.6;
+  outline: none;
 }
 
 .control-mark-input[type="radio"] + .control-mark {
@@ -1068,7 +1151,7 @@ li.buttons-item:last-child {
   content: "";
 }
 
-.control-mark-input[type="radio"]:focus ~.control-mark {
+.control-mark-input[type="radio"]:focus ~ .control-mark {
   opacity: 0.6;
   outline: 3px solid #83b3d3;
 }
@@ -1081,6 +1164,8 @@ li.buttons-item:last-child {
 
 .visual-sort-list {
   display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
   margin: 0;
   padding: 0;
   list-style-type: none;
@@ -1132,8 +1217,8 @@ li.buttons-item:last-child {
 }
 
 .search-results {
-  margin: 0px;
-  padding: 0px;
+  margin: 0;
+  padding: 0;
   font-weight: 700;
   font-size: 30px;
   line-height: 39px;
@@ -1178,11 +1263,16 @@ li.buttons-item:last-child {
   outline: none;
 }
 
-/* Начало разметки страниц гостиниц */
+.type-control:active {
+  opacity: 0.3;
+  outline: none;
+}
+
+/* Hotels*/
 .hotel-cards-container {
   display: grid;
   grid-template-columns: 151px 160px;
-  grid-template-rows: 31px auto 37px;
+  grid-template-rows: minmax(31px, auto) minmax(52px, auto) minmax(37px, auto);
   margin-right: 361px;
   column-gap: 9px;
 }
@@ -1199,8 +1289,13 @@ li.buttons-item:last-child {
 .hotel-cards-link:focus {
   border-radius: 10px;
   box-shadow: inset 0 0 0 3px #83b3d3;
-  /* тут вообще не понимаю как сделать по макету, в макете огромная рамка под это назание гостиницы
-  которая будет залезать на нижние названия */
+  min-width: 240px;
+  outline: none;
+}
+
+.hotel-cards-link:active {
+  opacity: 0.3;
+  box-shadow: none;
 }
 
 .hotel-cards-items {
@@ -1234,6 +1329,11 @@ li.buttons-item:last-child {
   outline: none;
 }
 
+.hotel-cards-picture-link:active {
+  opacity: 0.3;
+  box-shadow: none;
+}
+
 .hotel-cards-link {
   color: #000000;
   font-weight: 700;
@@ -1261,7 +1361,7 @@ li.buttons-item:last-child {
   text-transform: uppercase;
   text-align: center;
   border-radius: 4px;
-  height: 37px;
+  min-height: 37px;
 }
 
 .hotel-cards-items .hotel-cards-rating::before {
@@ -1269,7 +1369,7 @@ li.buttons-item:last-child {
   bottom: 100px;
   content: "";
   width: 98px;
-  height: 17px;
+  min-height: 17px;
   background-image: url("../img/icons/star.svg");
   background-size: 25px 17px;
 }
@@ -1287,14 +1387,12 @@ li.buttons-item:last-child {
 }
 
 .hotel-cards-stars {
-  background-color: black;
-  /* пустой для звездочек */
+  background-color: #000000;
 }
-/* Конец разметки каталога гостиниц */
 
 .load-all {
   background-color: #83b3d3;
-  height: 55px;
+  min-height: 55px;
   font-size: 20px;
   line-height: 26px;
   text-align: center;
@@ -1318,6 +1416,8 @@ li.buttons-item:last-child {
 
 .pagination {
   display: flex;
+  flex-wrap: wrap;
+  max-width: 400px;
   margin: 0;
   padding: 0;
   list-style-type: none;
@@ -1329,6 +1429,10 @@ li.buttons-item:last-child {
   border-top: 1px solid #e6e6e6;
 }
 
+.pagination-item {
+  margin-bottom: 8px;
+}
+
 .pagination-item:not(:last-child) {
   margin-right: 8px;
 }
@@ -1337,7 +1441,7 @@ li.buttons-item:last-child {
   font-size: 18px;
   line-height: 26px;
   margin-left: auto;
-  align-self: center;
+  align-self: flex-start;
 }
 
 .number-selection-label {
@@ -1372,14 +1476,14 @@ li.buttons-item:last-child {
   display: block;
   box-sizing: border-box;
   text-decoration: none;
-  width: 55px;
-  height: 55px;
+  min-width: 55px;
+  min-height: 55px;
   padding: 17px;
   color: #ffffff;
   font-weight: 700;
   background-color: #83b3d3;
   font-size: 20px;
-  line-height: 26px;
+  line-height: 21px;
   text-align: center;
   border-radius: 4px;
 }
@@ -1398,9 +1502,14 @@ li.buttons-item:last-child {
   outline: none;
 }
 
+.pagination-link:active {
+  color: rgba(255, 255, 255, 0.3);
+  box-shadow: none;
+}
+
 .like-counter {
   font-size: 10px;
-  color: white;
+  color: #ffffff;
   position: absolute;
   left: 22px;
   bottom: 19px;
@@ -1423,13 +1532,13 @@ li.buttons-item:last-child {
   color: #242424;
   background-color: #ffffff;
   min-height: 232px;
-  box-shadow: 0px 25px 50px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 25px 50px rgba(0, 0, 0, 0.15);
   border-radius: 20px;
   z-index: 2;
-  display: none;
+  /* а как мне сюда прописать теперь display:none для скрытия поповера? */
 }
 
-.popover:before {
+.popover::before {
   position: absolute;
   top: -10px;
   left: 191px;
@@ -1437,11 +1546,11 @@ li.buttons-item:last-child {
   content: "";
   width: 20px;
   height: 20px;
-  background-color: white;
+  background-color: #ffffff;
   border: 1px solid #e6e6e6;
-  border-right:none;
+  border-right: none;
   border-bottom: none;
-  transform:rotate(45deg);
+  transform: rotate(45deg);
 }
 
 .popover-content {
@@ -1488,6 +1597,7 @@ li.buttons-item:last-child {
 
 .favourite-cart-item-link:focus {
   outline: 3px solid #83b3d3;
+  z-index: 10;
 }
 
 .favourite-cart-item-picture {
@@ -1516,7 +1626,21 @@ li.buttons-item:last-child {
   display: block;
   box-sizing: border-box;
   padding: 10px;
-  background-color: white;
+  background-color: #ffffff;
+  fill: rgba(0, 0, 0, 0.3);
+}
+
+.cart-item-button .cart-item-icon {
+  fill: rgba(0, 0, 0, 0.3);
+}
+
+.cart-item-button:hover .cart-item-icon {
+  fill: #000000;
+}
+
+.cart-item-button:focus {
+  outline: 3px solid #83b3d3;
+  /* не понимаю почему кнопка по факту по высоте получается больше, если я задал svg-шке фиксированную высоту */
 }
 
 .popover-close-button {
@@ -1524,7 +1648,7 @@ li.buttons-item:last-child {
   align-items: center;
   justify-content: center;
   text-transform: uppercase;
-  font-family: PT Sans;
+  font-family: "PT Sans", sans-serif;
   font-weight: bold;
   font-size: 16px;
   line-height: 21px;
@@ -1534,6 +1658,19 @@ li.buttons-item:last-child {
   border-bottom-left-radius: 20px;
   border-bottom-right-radius: 20px;
   z-index: 1;
+}
+
+.popover-close-button:hover {
+  background-color: #615048;
+}
+
+.popover-close-button:focus {
+  box-shadow: 0 0 0 3px #83b3d3;
+  outline: none;
+}
+
+.popover-close-button:active {
+  color: rgba(255, 255, 255, 0.3);
 }
 
 .modal-container {
@@ -1549,7 +1686,7 @@ li.buttons-item:last-child {
 .modal {
   position: relative;
   margin: auto;
-  box-shadow: 0px 25px 50px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 25px 50px rgba(0, 0, 0, 0.15);
   background-color: #ffffff;
   border-radius: 30px;
   padding-right: 70px;
@@ -1572,7 +1709,7 @@ li.buttons-item:last-child {
   border: none;
   border-radius: 50%;
   background-color: #f2f2f2;
-  background-image: url(../img/icons/close.svg);
+  background-image: url("../img/icons/close.svg");
   background-repeat: no-repeat;
   background-position: center;
   cursor: pointer;
@@ -1586,11 +1723,16 @@ li.buttons-item:last-child {
   outline: 3px solid #83b3d3;
 }
 
+.modal-close-button:active {
+  opacity: 0.3;
+  outline: none;
+}
+
 .modal-title {
   margin: 0;
   padding: 0;
-  margin-bottom: 32px;
-  font-family: PT Sans;
+  margin-bottom: 54px;
+  font-family: "PT Sans", sans-serif;
   font-weight: 700;
   font-size: 30px;
   line-height: 40px;
@@ -1639,7 +1781,7 @@ li.buttons-item:last-child {
   box-sizing: border-box;
   padding-left: 19px;
   flex-grow: 1;
-  background-image: url(../img/icons/booking.svg);
+  background-image: url("../img/icons/booking.svg");
   background-repeat: no-repeat;
   background-size: 15px 15px;
   background-position: center right 19px;
@@ -1654,19 +1796,35 @@ li.buttons-item:last-child {
   outline: none;
 }
 
-.field-modal::after{
+.booking-arrival-form::after {
   position: absolute;
-  color:#FF5757;
-  content:"Мы не можем отправить вас в прошлое.";
-  width:420px;
-  height:29px;
+  top: 205px;
+  left: 225px;
+  color: #ff5757;
+  content: "Мы не можем отправить вас в прошлое.";
+  width: 420px;
+  height: 29px;
+  font-size: 16px;
 }
 
-.field-modal:invalid {
-color:red;
+.booking-departure-form::after {
+  position: absolute;
+  top: 298px;
+  left: 225px;
+  color: #333333;
+  content: "На эти даты есть свободные номера. Пока есть.";
+  width: 420px;
+  height: 29px;
+  font-size: 16px;
 }
 
-/* не знаю как сделать invalid с учетом того что у нас type=text задается+ впринципе мое сообщение не выводится в форме */
+.field-modal:active {
+  box-shadow: none;
+  opacity: none;
+  background-color: #ffffff;
+  color: rgba(0, 0, 0, 1);
+  outline: 2px solid #000000;
+}
 
 .booking-submit {
   font-size: 20px;
@@ -1677,12 +1835,17 @@ color:red;
   grid-row: 4/5;
 }
 
-.booking-submit:hover{
-  background: #68A2CA;
+.booking-submit:hover {
+  background: #68a2ca;
 }
 
-.booking-submit:focus{
-  outline:3px solid #756257;
+.booking-submit:focus {
+  outline: 3px solid #756257;
+}
+
+.booking-submit:active {
+  color: rgba(255, 255, 255, 0.3);
+  outline: none;
 }
 
 .adult-counter {
@@ -1748,6 +1911,10 @@ color:red;
   background: rgba(0, 0, 0, 0.3);
 }
 
+.minus:hover::after {
+  background: rgba(0, 0, 0, 1);
+}
+
 .plus {
   border-top-right-radius: 4px;
   border-bottom-right-radius: 4px;
@@ -1772,11 +1939,19 @@ color:red;
   right: 19px;
 }
 
+.plus:hover::before {
+  background-color: rgba(0, 0, 0, 1);
+}
+
+.plus:hover::after {
+  background-color: rgba(0, 0, 0, 1);
+}
+
 .child-label {
   position: relative;
 }
 
-.info {
+.info-modal {
   position: absolute;
   width: 25px;
   height: 25px;
@@ -1784,27 +1959,16 @@ color:red;
   border-radius: 50%;
   border: none;
   right: 222px;
-  color: white;
+  color: #ffffff;
 }
 
-.button-counter:focus::after {
-  position: absolute;
-  top: 0;
-  right: 0;
-  left: 0;
-  bottom: 0;
-  margin: auto;
-  width: 25px;
-  height: 25px;
-  background: none;
-  outline: 3px solid #83b3d3;
+.button-counter:focus {
   border: none;
-  border-radius: 4px;
-  content: "";
-  /* с помощью этого пппытался создать по стайлгайду обводку вокруг + и- , но в итоге это стирает одну палку. как лучше эт сделать? */
+  box-shadow: inset 0 0 0 3px #83b3d3;
+  /* с помощью этого попытался создать по стайлгайду обводку вокруг + и- , но в итоге это стирает одну палку. как лучше эт сделать? */
 }
 
-.info:hover {
+.info-modal:hover {
   background-color: #68a2ca;
 }
 
@@ -1819,9 +1983,9 @@ color:red;
   width: 256px;
   height: 143px;
   background: #333333;
-  box-shadow: 0px 15px 30px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
   border-radius: 10px;
-  font-family: PT Sans;
+  font-family: "PT Sans", sans-serif;
   font-weight: 400;
   font-size: 16px;
   line-height: 20px;
@@ -1841,7 +2005,7 @@ color:red;
   transform: rotate(-45deg);
 }
 
-.info:hover .info-wrapper {
+.info-modal:hover .info-wrapper {
   display: block;
 }
 
