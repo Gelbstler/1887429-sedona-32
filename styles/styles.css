@@ -1811,7 +1811,7 @@ li.buttons-item:last-child {
 
 .field-modal:active {
   box-shadow: none;
-  opacity: none;
+  opacity: 0;
   background-color: #ffffff;
   color: rgba(0, 0, 0, 1);
   outline: 2px solid #000000;
